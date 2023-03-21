@@ -55,6 +55,8 @@ Modern programming languages, like C#, Python, Dart etc, are built on top of low
 - The lower the level of abstraction, the **easier to talk to the bare metal**.
 - The higher the level of abstraction, the **easier to understand by human and job can be done faster.**
 
+**[⬆ Back to top](#mcte-4327-software-engineering)**
+
 ## Chapter 2 - Software Engineering Principles
 
 <img src="https://user-images.githubusercontent.com/60868965/226318675-cad05c23-8e77-4d97-a68d-ea7cffc3801f.png" width="55%">
@@ -103,6 +105,28 @@ end
 
 You can see the example of the release process in many OSS, for example, in the [arduino-ide](https://github.com/arduino/arduino-ide/releases) development. Notice that, they started to release **beta** version publicly in the [`2.0.0-beta.1`](https://github.com/arduino/arduino-ide/releases/tag/2.0.0-beta.1) on 12 Feb 2021. After `beta.12`, they move to **RC** stages begin with [`2.0.0-rc1`](https://github.com/arduino/arduino-ide/releases/tag/2.0.0-rc1). Finally, the release the **stable** version [`2.0.0`](https://github.com/arduino/arduino-ide/releases/tag/2.0.0) on 14 September 2022. _Oh btw, software versioning is another interested topic to learn._
 
+### Software Development Lifecycle (SDLC)
+
+#### In general
+
+```mermaid
+graph LR
+subgraph Planning
+P[Planning] --> R[Requirements]
+R --> D[Design]
+end
+subgraph Development
+D --> C[Code]
+C --> T[Test]
+end
+subgraph Deployment
+T --> I[Install]
+I --> M[Maintenance]
+end
+```
+
+**[⬆ Back to top](#mcte-4327-software-engineering)**
+
 ## Chapter 3 - Primitive Data Types
 
 <img src="https://user-images.githubusercontent.com/60868965/226317881-e8aac398-dbf3-483e-a7f5-35c57a80cada.png" width="40%">
@@ -142,6 +166,196 @@ R[Reference types] --> J[object]
 R[Reference types] --> K[array]
 R[Reference types] --> L[delegate]
 ```
+
+Example:
+
+Assume `Coordinate` is a Class
+
+```csharp
+var pos1 = new Coordinate(101.2, 3.14);
+var pos2 = pos1;
+
+pos1.latitude = 300.2;
+
+Console.WriteLine(pos1); // 300.2,3.14
+Console.WriteLine(pos2); // 300.2,3.14
+```
+
+Since we have `pos2 = pos1`, `pos2` is a reference to `pos1`. So, when we change the value of `pos1`, `pos2` will also change.
+
+Now, tet's change the `Coordinate` object from `Class` to a `struct`. Now, both value are independent. Changes with `pos1` will not affect `pos2`.
+
+```csharp
+...
+Console.WriteLine(pos1); // 300.2,3.14
+Console.WriteLine(pos2); // 101.2,3.14
+```
+
+### `var` keyword
+
+The `var` keyword is used to declare a variable of a type that is inferred from the value of the expression on the right side of the assignment operator. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/var)]
+
+```csharp
+var a = 10; // a is an int
+var b = 10.5; // b is a double
+var c = "Hello World UwU"; // c is a string
+```
+
+### Arrays
+
+An array is a data structure that contains a group of elements of the same type. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/)]
+
+Example:
+
+```csharp
+int[] foo = new int[5]; // declare an array of 5 integers
+foo[0] = 1;
+foo[1] = 2;
+foo[2] = 3;
+foo[3] = 4;
+foo[4] = 5;
+```
+
+or you can do it in one line:
+
+```csharp
+int[] foo = new int[5] {1, 2, 3, 4, 5};
+```
+
+### Iteration Statements
+
+#### for-loop
+
+The `for` loop is used to iterate a part of the program several times. [[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-for-statement)]
+
+Take the array example above, we can use `for` loop to iterate through the array:
+
+```csharp
+for (int i = 0; i < foo.Length; i++)
+{
+    Console.WriteLine(foo[i]);
+}
+```
+
+#### foreach-loop
+
+The `foreach` loop is used to iterate through the elements of a collection. [[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statement)]
+
+```csharp
+foreach (int i in foo)
+{
+    Console.WriteLine(i);
+}
+```
+
+#### Takeways
+
+`for` loop allows us to access the array element and modify it (if we wanted to). Meanwhile, `foreach` loop only allows us to read the array element but not modify it.
+
+### Default value
+
+The default value of a variable is the value that is assigned to it when it is declared. The default value of a variable depends on the type of the variable. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/default-values-table)]
+
+```csharp
+int a; // a is 0
+double b; // b is 0
+string c; // c is null
+bool d; // d is false
+```
+
+> **Note** Any reference type will default to `null` if not initialized.
+
+Note that the default value only be asssigned for **member variables** of a class/struct. Local variables must be initialized before use. See example code [here](https://github.com/iqfareez/MCTE-4327-Software-Engineering/blob/5d5a92e36ccd41a626d050fe8621395982756b2f/ConsoleApp1-2032023/ConsoleApp1-2032023/Program.cs#L112-L123).
+
+For example, consider the code below:
+
+```csharp
+static void Main(string[] args)
+{
+    int a;
+    Console.WriteLine(a);
+}
+```
+
+The code above will yield an error: `Use of unassigned local variable 'a'`.
+
+Let's consider another example:
+
+```csharp
+class Meow
+{
+    public int a;
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        var meow = new Meow();
+        Console.WriteLine(meow.a); // 0
+    }
+}
+```
+
+This time, the uninitialized variable `a` will be assigned the default value of `0`. No error will be thrown.
+
+### Anonymous Types
+
+Anonymous types are used to create an object without having to explicitly define a type. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/anonymous-types)]
+
+```csharp
+var kuceng = new { Name = "comot", Age = 4 };
+Console.WriteLine(kuceng.toString()); // { Name = comot, Age = 4 }
+```
+
+However, anonymous types are **immutable**. You cannot change the value of the properties of an anonymous type.
+
+```csharp
+kuceng.Name = "mikail"; // error
+```
+
+### Methods
+
+Methods? Oh, when a **function** is a part of a class, it's called a **method**.
+
+> C# is an OOP language and doesn't have functions that are declared outside of classes, that's why all functions in C# are actually methods.
+> Though, beside this formal difference, they are the same...
+
+A method is a block of code that performs a specific task. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods)]
+
+#### Basic method
+
+```csharp
+private static void PrintHello()
+{
+    Console.WriteLine("Hello world");
+}
+```
+
+#### Method with return value
+
+```csharp
+private static int AddNumber(int a, int b)
+{
+    return a + b;
+}
+```
+
+#### Method with multiple return values (Tuple)
+
+```csharp
+static (string, int) LookupCat()
+{
+    return ("Cicik", 12);
+}
+
+// you can 'unpack' the tuple value:
+(string catName, int catAge) = LookupCat();
+Console.WriteLine(catName); // Cicik
+Console.WriteLine(catAge); // 12
+```
+
+**[⬆ Back to top](#mcte-4327-software-engineering)**
 
 <!-- ## Chapter 4 - Object Oriented Programming -->
 
