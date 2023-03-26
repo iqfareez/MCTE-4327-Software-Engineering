@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 /// <summary>
 /// Ask user to input string/message
@@ -19,15 +20,39 @@ namespace Exercise1_2232023
     {
         static void Main(string[] args)
         {
-
-            var inputMessage = Console.ReadLine();
-
-            process(inputMessage);
+            Console.WriteLine("Please input a message: (Invoke Ctrl+C to exit)");
+            
+            // keep asking for input until user exit the program
+            for (;;)
+            {
+                var inputMessage = Console.ReadLine();
+                Process(inputMessage);    
+            }
         }
 
-        static void process(string message)
+        static void Process(string message)
         {
-            System.IO.File.WriteAllText("@../../../saved.txt", DateTime.Now.ToString() + message);
+            var messageContent = $"{DateTime.Now}: {message}";
+            var filePath = @"saved.txt";
+
+            try
+            {
+                // Check if the file exists and create it if it doesn't
+                if (!File.Exists(filePath))
+                {
+                    using StreamWriter sw = File.CreateText(filePath);
+                    sw.WriteLine(messageContent);
+                }
+                else
+                {
+                    // Append the content to the existing file
+                    File.AppendAllText(filePath, messageContent+"\n");
+                }
+            }
+            catch (UnauthorizedAccessException e)
+            {
+                Console.WriteLine($"File locked.");
+            }
         }
     }
 }

@@ -191,6 +191,8 @@ Console.WriteLine(pos1); // 300.2,3.14
 Console.WriteLine(pos2); // 101.2,3.14
 ```
 
+There are some other examples, visit [here](https://github.com/iqfareez/MCTE-4327-Software-Engineering/blob/ea8efbdc837c1e31f103f54f5c15925cd7da2968/ConsoleApp1-2032023/ConsoleApp1-2032023/Program.cs#L90-L106) and [here](https://github.com/iqfareez/MCTE-4327-Software-Engineering/blob/ea8efbdc837c1e31f103f54f5c15925cd7da2968/ConsoleApp1-2232023/ConsoleApp1-2232023/Program.cs#L16-L32).
+
 ### `var` keyword
 
 The `var` keyword is used to declare a variable of a type that is inferred from the value of the expression on the right side of the assignment operator. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/var)]
@@ -355,10 +357,125 @@ Console.WriteLine(catName); // Cicik
 Console.WriteLine(catAge); // 12
 ```
 
+### String
+
+A string is an object of type String whose value is text. [[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/)]
+
+```csharp
+var boo = "my message here";
+Console.WriteLine(boo.Length); // 15
+
+// substring
+Console.WriteLine(boo.Substring(4, 8)); // essage h
+
+// Splitting string. By default, the delimiter is " "
+var s = boo.Split(); // ["my", "message", "here"]
+```
+
+#### `toString()` method
+
+The `toString()` method is used to convert the value of a variable to a string. [[Docs](https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring?view=net-5.0)]
+
+```csharp
+int z = 80;
+DisplayMessage(z.ToString()); // 80
+```
+
+You can override the `toString()` method in your class.
+
+Say you have the class below:
+
+```csharp
+ class City
+{
+    public string Name;
+    public int Population;
+}
+```
+
+Then,
+
+```csharp
+City petalingJaya = new City();
+petalingJaya.Name = "Petaling Jaya";
+petalingJaya.Population = 1000000;
+
+Console.WriteLine(petalingJaya); // ConsoleApplication2.City
+
+```
+
+The output will be your namespace+class name. The output is perhaps not very useful. You can override the `toString()` method to make it more useful.
+
+```csharp
+public override string ToString()
+{
+    return $"{Name}: {Population}";
+}
+...
+Console.WriteLine(petalingJaya); // Petaling Jaya: 1000000
+```
+
+### DateTime
+
+Represents an instant in time, typically expressed as a date and time of day. [[Docs](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-8.0)]
+
+```csharp
+// Get current date & time
+DateTime now = DateTime.Now;
+Console.WriteLine(now); // 2021-10-10 11:00:00
+
+// format dateTime
+Console.WriteLine(now.ToString("HH:mm, dddd")); // 11:00, Sunday
+```
+
+### Parsing
+
+Usually from literal string to a specific type. Eg: string ➡️ int
+
+```csharp
+int.Parse("123"); // 123
+int arg1 = int.Parse(args[0]);
+```
+
+### Exception Handling
+
+An exception is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions. [[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/exceptions/)]
+
+By catching exceptions, you can handle errors in a controlled and graceful manner.
+
+```csharp
+try
+{
+    // code that might throw an exception
+    int.Parse("abc");
+}
+catch (Exception ex)
+{
+    // code to handle the exception
+    Console.WriteLine(ex.Message); // "Input string was "not in a correct format.
+}
+```
+
+### Random Number
+
+Represents a pseudo-random number generator, which is an algorithm that produces a sequence of numbers that meet certain statistical requirements for randomness. [[Docs](https://learn.microsoft.com/en-us/dotnet/api/system.random?view=net-8.0)]
+
+```csharp
+Random random = new Random();
+int diceNumber = random.Next(1, 7);
+Console.WriteLine(diceNumber); // 1-6
+```
+
 **[⬆ Back to top](#mcte-4327-software-engineering)**
 
-<!-- ## Chapter 4 - Object Oriented Programming -->
+## Chapter 4 - Object Oriented Programming
+
+<img src="https://user-images.githubusercontent.com/60868965/226765764-ac743224-fe9c-49ad-bea5-2d7e8f9abfe9.png" width="50%">
 
 <!-- ## Chapter 12 - Software Security
 
 ![xkcd security](https://imgs.xkcd.com/comics/security.png) -->
+
+```
+
+```
