@@ -107,6 +107,10 @@ You can see the example of the release process in many OSS, for example, in the 
 
 ### Software Development Lifecycle (SDLC)
 
+> aka Software Development Methodology
+
+A process for planning, creating, testing, and deploying an application or system.
+
 #### In general
 
 ```mermaid
@@ -124,6 +128,50 @@ T --> I[Install]
 I --> M[Maintenance]
 end
 ```
+
+#### Some examples of popular SDLC
+
+| Methodology | Definition                                                                                                                                                                                                                                | Pros                                                                                                                                                                                    | Cons                                                                                                                                                              |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Waterfall   | A linear, sequential approach to software development in which **each phase (requirements, design, implementation, testing, deployment, and maintenance) must be completed before moving on** to the next.                                | Easy to understand and manage, provides a clear path from start to finish, works well for projects with well-defined requirements.                                                      | Can be slow and inflexible, makes it difficult to respond to changing requirements or feedback, can result in a product that doesn't meet user needs.             |
+| Incremental | A method of software development in which the **project is divided into smaller parts** or "increments," with each increment building on the previous one. Each increment includes the entire software development life cycle.            | Allows for early and frequent delivery of working software, makes it easier to respond to changes or feedback, reduces the risk of project failure by identifying problems early.       | Can be difficult to plan and manage, may require more resources and time than other methods, may result in a less cohesive product if not properly integrated.    |
+| Prototype   | A method of software development in which a **preliminary version of the software is created** to test and evaluate ideas, concepts, and designs.                                                                                         | Allows for early and frequent feedback, enables rapid iteration and improvement, can help clarify and refine requirements.                                                              | Can be difficult to manage and control, may result in a product that doesn't meet user needs if not properly tested, can be costly and time-consuming.            |
+| Spiral      | A method of software development in which the project is **divided into smaller parts, each of which goes through a series of iterative steps**, including planning, risk assessment, engineering, and evaluation.                        | Enables frequent and thorough risk assessment, allows for early and frequent feedback, enables continuous improvement and refinement.                                                   | Can be complex and difficult to manage, may require more resources and time than other methods, may result in a less cohesive product if not properly integrated. |
+| Agile       | A method of software development that **emphasizes collaboration, flexibility, and rapid iteration**. Work is divided into small, self-contained units called "sprints," with each sprint delivering a working increment of the software. | Enables rapid response to changing requirements or feedback, encourages collaboration and communication among team members, allows for early and frequent delivery of working software. | Can be difficult to plan and manage, may require more resources and time than other methods, may result in a less cohesive product if not properly integrated.    |
+
+### Requirement engineering
+
+The process of **identifying, documenting, and managing requirements** for a product, system, or software to satisfy customer needs and business objectives.
+
+#### Stages
+
+1. Inception - Asks basic questions about the project, such as **what** the project is, **why** it is needed, and **who** will use it.
+2. Elicitation - Address problems of scope/understanding/volatility.
+3. Elaboration - Analysis model that identifies data, function, features, constraints and behavioral requirements.
+4. Negotiation - Agree on a deliverable system
+5. Specification
+
+#### UML Diagrams
+
+UML (Unified Modeling Language) diagrams that are commonly used in software engineering to help design and document software systems.
+
+Some of the examples including:
+
+##### Use case diagram
+
+<img src="https://d2slcw3kip6qmk.cloudfront.net/marketing/pages/chart/what-is-a-use-case-diagram-in-UML/UML_use_case_example-800x707.PNG" width="50%">
+
+##### Class diagram
+
+<img src="https://sparxsystems.com/images/screenshots/uml2_tutorial/cl01.png" width="50%">
+
+##### Sequence diagram
+
+<img src="https://awsimages.detik.net.id/community/media/visual/2023/01/28/sequence-diagram-1_169.jpeg?w=1200" width="50%">
+
+##### Activity diagram
+
+<img src="https://cdn-images.visual-paradigm.com/guide/uml/what-is-activity-diagram/04-activity-diagram-example-process-order.png" width="50%">
 
 **[⬆ Back to top](#mcte-4327-software-engineering)**
 
@@ -475,7 +523,3 @@ Console.WriteLine(diceNumber); // 1-6
 <!-- ## Chapter 12 - Software Security
 
 ![xkcd security](https://imgs.xkcd.com/comics/security.png) -->
-
-```
-
-```
