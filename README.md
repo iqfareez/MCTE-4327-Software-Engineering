@@ -520,6 +520,145 @@ Console.WriteLine(diceNumber); // 1-6
 
 <img src="https://user-images.githubusercontent.com/60868965/226765764-ac743224-fe9c-49ad-bea5-2d7e8f9abfe9.png" width="50%">
 
+### 4 Pillars of OOP
+
+Object Oriented Programming (OOP) is a popular programming paradigm that focuses on creating objects which contain both data and behavior. It is based on the concepts of encapsulation, inheritance, and polymorphism, and provides a way to organize and structure code in a more intuitive and efficient manner.
+
+![OOP PILLARS](https://res.cloudinary.com/practicaldev/image/fetch/s--IjJvEd7t--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/rhmqpialqzzcfygzsshj.png)
+
+### Encapsulation
+
+Encapsulation refers to the idea of bundling data and methods within a single unit, and restricting access to the data from outside that unit. In C#, encapsulation is achieved through the use of access modifiers such as `public` and `private`, and properties with getter and setter methods.
+
+#### `public` and `private` access modifiers
+
+To control wether members/methods can be accessed from outside the class.
+
+- `public` - member/method can be accessed from anywhere.
+- `private` - member/method can only be accessed from within the class.
+
+```csharp
+class BankAccount
+{
+    private double balance;
+
+    public double GetBalance()
+    {
+        return balance;
+    }
+
+    public void Deposit(double amount)
+    {
+        balance += amount;
+    }
+
+    public void Withdraw(double amount)
+    {
+        balance -= amount;
+    }
+}
+```
+
+#### getter and setter methods
+
+Getter and setter methods are used to access and modify the value of a private field. They are also known as accessor and mutator methods.
+
+```csharp
+class BankAccount
+{
+    private double balance;
+
+    public double Balance
+    {
+        get { return balance; }
+        private set { balance = value; }
+    }
+
+    public void Deposit(double amount)
+    {
+        Balance += amount;
+    }
+
+    public void Withdraw(double amount)
+    {
+        Balance -= amount;
+    }
+}
+```
+
+#### `static` keyword
+
+A static member is associated with the type itself rather than with a specific object. You access static members without instantiating the class. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members)]
+
+```csharp
+public static class TemperatureConverter
+{
+    public static double CelsiusToFahrenheit(string temperatureCelsius)
+    {
+        // Convert argument to double for calculations.
+        double celsius = Double.Parse(temperatureCelsius);
+
+        // Convert Celsius to Fahrenheit.
+        double fahrenheit = (celsius * 9 / 5) + 32;
+
+        return fahrenheit;
+    }
+}
+
+class TestTemperatureConverter
+{
+    static void Main()
+    {
+        F = TemperatureConverter.CelsiusToFahrenheit(98.2);
+    }
+}
+
+```
+
+### Inheritance
+
+Inheritance is a fundamental concept in OOP that allows you to create new classes based on existing ones. Inheritance enables you to reuse code from a parent class (also known as a superclass or base class) and extend or modify it in a child class (also known as a subclass or derived class). This makes your code more organized, easier to read, and less repetitive. [[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance)]
+
+```csharp
+using System;
+
+class Animal
+{
+    public string Name { get; set; }
+
+    public Animal(string name)
+    {
+        Name = name;
+    }
+
+    public virtual void Speak()
+    {
+        Console.WriteLine($"{Name} makes a noise.");
+    }
+}
+
+class Dog : Animal
+{
+    public Dog(string name) : base(name)
+    {
+    }
+
+    public override void Speak()
+    {
+        Console.WriteLine($"{Name} barks.");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Dog dog = new Dog("Rex");
+        dog.Speak(); // Rex barks.
+    }
+}
+```
+
 <!-- ## Chapter 12 - Software Security
 
 ![xkcd security](https://imgs.xkcd.com/comics/security.png) -->
