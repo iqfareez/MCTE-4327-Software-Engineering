@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>ConsoleApp4_OOP_4_3_2023</RootNamespace>
+  </PropertyGroup>
+
+</Project>
