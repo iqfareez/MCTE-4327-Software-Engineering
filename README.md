@@ -8,6 +8,9 @@
 - [Chapter 1 - Introduction](#chapter-1---introduction)
 - [Chapter 2 - Software Engineering Principles](#chapter-2---software-engineering-principles)
 - [Chapter 3 - Primitive Data Types](#chapter-3---primitive-data-types)
+- [Chapter 4 - Object Oriented Programming](#chapter-4---object-oriented-programming)
+- [Chapter 5 - Event Driven SE](#chapter-5---event-driven-se)
+- [Chapter 7 - Graphical User Interface (GUI)](#chapter-7---graphical-user-interface-gui)
 
 ## Chapter 1 - Introduction
 
@@ -658,6 +661,195 @@ class Program
     }
 }
 ```
+
+#### `base` keyword
+
+The `base` keyword is used to access members of the base class from within a derived class. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/base)]
+
+```csharp
+class Animal
+{
+    public string Name { get; set; }
+
+    public Animal(string name)
+    {
+        Name = name;
+    }
+
+    public virtual void Speak()
+    {
+        Console.WriteLine($"{Name} makes a noise.");
+    }
+}
+
+class Dog : Animal
+{
+    public Dog(string name) : base(name)
+    {
+    }
+
+    public override void Speak()
+    {
+        base.Speak();
+        Console.WriteLine($"{Name} barks.");
+    }
+}
+```
+
+#### Preventing inheritance
+
+To prevent a class from being inherited, use the `sealed` keyword. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/sealed)]
+
+```csharp
+sealed class Animal
+{
+    // implementation
+}
+```
+
+### Polymorphism
+
+Polymorphism is the ability of an object to take on many forms. The most common use of polymorphism in OOP occurs when a parent class reference is used to refer to a child class object. [[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/polymorphism)]
+
+#### Upcasting & Downcasting
+
+Upcasting is the process of converting a reference of a derived class to a base class. This is done automatically when you assign a derived class object to a base class reference. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions#upcasting-and-downcasting)]
+
+```csharp
+// Assume Car class is inherited from Vehicle class
+Car A = new Car();
+A.brand = "Myvi";
+A.type = "Compact";
+
+// Upcasting (from Car to Vehicle)
+Vehicle B = A;
+
+Console.WriteLine(B.type); // Compact
+
+// Downcasting (from Vehicle to Car)
+Car C = (Car)B;
+Console.WriteLine(C.brand); // Myvi
+Console.WriteLine(C.type); // Compact
+```
+
+## Chapter 5 - Event Driven SE
+
+### Delegate
+
+A pointer to a function. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/)]
+
+```csharp
+public delegate int Transformer(int x);
+
+Transformer square = x => x * x;
+var ans = square(3); // or square.Invoke(3)
+Console.WriteLine(ans); // 9
+```
+
+> **Note** - The `=>` operator is called the **lambda operator**. It is used to define an anonymous method. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-operator)]
+
+### Built-in delegates
+
+A built-in delegate is a pre-defined delegate type that is provided by the .NET Framework.
+
+```mermaid
+flowchart TB
+    A[Built-in Delegates] --> B[Action]
+    A --> C[Func]
+    A --> D[Predicate]
+```
+
+> **Note** - The built-in delegate can have up to 16 input parameters.
+
+#### Action
+
+Represents a method that has a `void` **return type** and takes zero or more input parameters.. [[Docs](https://docs.microsoft.com/en-us/dotnet/api/system.action?view=net-5.0)]
+
+```csharp
+Action<string> print = Console.WriteLine;
+print("Hello World"); // Hello World
+```
+
+#### Func
+
+Represents a method that has a **return type** and takes zero or more input parameters. [[Docs](https://docs.microsoft.com/en-us/dotnet/api/system.func-1?view=net-5.0)]
+
+```csharp
+Func<int, int, int> add = (x, y) => x + y;
+var ans = add(3, 4); // or add.Invoke(3, 4)
+Console.WriteLine(ans); // 7
+```
+
+> **Note** - The last parameter of the `Func` delegate is always the return type.
+
+**[⬆ Back to top](#mcte-4327-software-engineering)**
+
+## Chapter 7 - Graphical User Interface (GUI)
+
+~ is a type of interface that allows users to interact with digital devices using **visual elements** such as icons, menus, and buttons, rather than text-based commands.
+
+### Windows Forms
+
+Windows Forms is a graphical user interface (GUI) subsystem provided by the .NET Framework. It is a managed code framework that provides a set of classes and other resources that you can use to create Windows-based applications. [[Docs](https://docs.microsoft.com/en-us/dotnet/desktop/winforms/?view=netdesktop-5.0)]
+
+Example: [Label](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.label?view=windowsdesktop-7.0), [Button](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.button?view=windowsdesktop-7.0) and [MessageBox](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.messagebox?view=windowsdesktop-8.0) elements.
+
+```csharp
+static void Main()
+{
+    Application.EnableVisualStyles();
+    Application.SetCompatibleTextRenderingDefault(false);
+
+    var form1 = new Form();
+    form1.Text = "Form 1";
+    form1.Width = 400;
+    form1.Height = 300;
+
+    Label label1 = new Label();
+    label1.Text = "Welcome to this application";
+    label1.Font = new System.Drawing.Font("Arial", 15);
+    label1.Width = 300;
+    label1.Height = 70;
+    label1.Left = 40;
+    label1.Top = 20;
+
+    Button button1 = new Button();
+    button1.Text = "Click me!";
+    button1.Width = 100;
+    button1.Height = 50;
+    button1.Left = 150;
+    button1.Top = 100;
+    button1.Click += (a ,e) => MessageBox.Show("I've been clicked!", "My Dialog");
+
+    form1.Controls.Add(label1);
+    form1.Controls.Add(button1);
+
+    Application.Run(form1);
+}
+```
+
+![example1](https://imgur.com/VI03OCm.png)
+
+### Timer
+
+A timer is a control that raises an event at specified intervals. [[Docs](https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.timer?view=net-5.0)]
+
+```csharp
+// Tick event handler
+private void timer1_Tick(object sender, EventArgs e)
+{
+    // The interval is set to 20 (ms) in the form designer.
+    timerLabel.Text = DateTime.Now.ToString("HH:mm:ss, dddd");
+}
+```
+
+![Video_2023_04_13-2](https://user-images.githubusercontent.com/60868965/231608597-3829c79c-db19-4e64-a06f-43808af9608d.gif)
+
+When you set the `Interval` property to a positive integer value, the `Timer` starts counting down from that value in milliseconds. When the count reaches zero, the `Timer` raises the `Tick` event and resets the count to the `Interval` value, starting the countdown again.
+
+To learn more on date & time formatting, visit [here](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings).
+
+**[⬆ Back to top](#mcte-4327-software-engineering)**
 
 <!-- ## Chapter 12 - Software Security
 
