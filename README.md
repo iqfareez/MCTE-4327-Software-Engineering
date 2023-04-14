@@ -14,7 +14,7 @@
 
 ## Chapter 1 - Introduction
 
-<img src="https://imgs.xkcd.com/comics/abstraction.png" width="45%">
+![im a god programmer](https://imgs.xkcd.com/comics/abstraction.png)
 
 > Software is just a collection of instruction, to make a rock doing something useful.
 
@@ -62,7 +62,7 @@ Modern programming languages, like C#, Python, Dart etc, are built on top of low
 
 ## Chapter 2 - Software Engineering Principles
 
-<img src="https://user-images.githubusercontent.com/60868965/226318675-cad05c23-8e77-4d97-a68d-ea7cffc3801f.png" width="55%">
+![code fvck](https://user-images.githubusercontent.com/60868965/226318675-cad05c23-8e77-4d97-a68d-ea7cffc3801f.png)
 
 ### Definition
 
@@ -423,9 +423,11 @@ Console.WriteLine(boo.Substring(4, 8)); // essage h
 var s = boo.Split(); // ["my", "message", "here"]
 ```
 
+`String` vs `string`? `string` (lowercase) is just an alias for `String` (uppercase) from the `System` namespace, which means you can use **either keyword** to declare a string variable or to use any of the string class's methods.
+
 #### `toString()` method
 
-The `toString()` method is used to convert the value of a variable to a string. [[Docs](https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring?view=net-5.0)]
+The `toString()` method is used to represent the value of an object as a string. [[Docs](https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring?view=net-5.0)]
 
 ```csharp
 int z = 80;
@@ -490,9 +492,11 @@ int arg1 = int.Parse(args[0]);
 
 ### Exception Handling
 
-An exception is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions. [[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/exceptions/)]
+![try/catch meme](https://miro.medium.com/v2/resize:fit:799/1*IZMVVaaAWxOhep_D-ly0gQ.jpeg)
 
-By catching exceptions, you can handle errors in a controlled and graceful manner.
+An exception is an **event**, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions. [[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/exceptions/)]
+
+By catching exceptions, you can handle errors in a **controlled and graceful** manner.
 
 ```csharp
 try
@@ -527,7 +531,7 @@ Console.WriteLine(diceNumber); // 1-6
 
 Object Oriented Programming (OOP) is a popular programming paradigm that focuses on creating objects which contain both data and behavior. It is based on the concepts of encapsulation, inheritance, and polymorphism, and provides a way to organize and structure code in a more intuitive and efficient manner.
 
-![OOP PILLARS](https://res.cloudinary.com/practicaldev/image/fetch/s--IjJvEd7t--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/rhmqpialqzzcfygzsshj.png)
+![4 OOP Pillars](https://user-images.githubusercontent.com/60868965/232172005-9bf14f1e-3423-47de-817a-6c86a0e93369.png)
 
 ### Encapsulation
 
@@ -732,7 +736,135 @@ Console.WriteLine(C.brand); // Myvi
 Console.WriteLine(C.type); // Compact
 ```
 
+### Abstract class
+
+An abstract class is a class that is declared with the `abstract` keyword. An abstract class **may not be instantiated**, but it **may be inherited** by non-abstract subclasses. [[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract)]
+
+```csharp
+abstract class Painter
+{
+   // implementation
+}
+```
+
+### Interface
+
+An interface is a reference type that defines a set of methods, properties, events, or indexers that a class or struct **must implement**. [[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/interfaces)]
+
+```csharp
+interface IShape {
+    void Draw();
+}
+
+interface IMovable {
+    void Move();
+}
+
+class Circle : IShape, IMovable {
+    public void Draw() {
+        Console.WriteLine("Drawing a circle.");
+    }
+
+    public void Move() {
+        Console.WriteLine("Moving a circle.");
+    }
+}
+
+class Program {
+    static void Main(string[] args) {
+        Circle circle = new Circle();
+        circle.Draw();
+        circle.Move();
+    }
+}
+
+```
+
+### Abstract class vs Interface
+
+|                | Abstract Class                                                         | Interface                                                      |
+| -------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------- |
+| Implementation | Can have both abstract and non-abstract methods.                       | Can only have abstract methods.                                |
+| Inheritance    | A class can inherit from only one abstract class.                      | A class can implement multiple interfaces.                     |
+| Fields         | Can have fields.                                                       | Cannot have fields.                                            |
+| Constructors   | Can have constructors.                                                 | Cannot have constructors.                                      |
+| Usage          | Typically used to define a base class for a family of related classes. | Used to define a contract that a class must follow.            |
+| Flexibility    | Provides more implementation flexibility.                              | Provides more flexibility in defining the behavior of a class. |
+
+### object
+
+The `object` type is the root of the type hierarchy. Every type in C# directly or indirectly derives from the `object` type. [[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types)]
+
+```csharp
+object obj = 123;
+Console.WriteLine(obj); // 123
+```
+
+Every object has the following methods:
+
+- `Equals()` - Determines whether the specified object is equal to the current object.
+- `GetHashCode()` - Serves as the default hash function.
+- `GetType()` - Gets the `Type` of the current instance.
+- `ToString()` - Returns a string that represents the current object.
+
+### Boxing & unboxing
+
+Boxing is the process of converting a value type to the `object` type or to any interface type implemented by this value type. Unboxing is the reverse process. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/boxing-and-unboxing)]
+
+```csharp
+string food = "cekodok";
+
+// boxing - converting a value type to the object type
+object foodObj = food;
+
+// unboxing - converting an object type to a value type
+string foodStr = (string) foodObj;
+
+Console.WriteLine(foodStr); // cekodok
+```
+
+### Generic method
+
+A generic method is a method that can be called with arguments of different types. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/generic-methods)]
+
+```csharp
+static void Swap<T>(ref T a, ref T b)
+{
+    T temp = a;
+    a = b;
+    b = temp;
+}
+
+int a = 1, b = 2;
+Swap(ref a, ref b);
+Console.WriteLine(a); // 2
+Console.WriteLine(b); // 1
+```
+
+The example above passes type `int` to the method. But, it is also possible to pass other types such as `string`, `float`, etc.
+
+### Generic class
+
+A generic class is a class that can be called with arguments of different types. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/generic-classes)]
+
+```csharp
+class GenericList<T>
+{
+    public void Add(T input) { }
+}
+
+var list = new GenericList<int>();
+list.Add(1);
+```
+
+Why use Generic class/method?
+
+- Reusability: When you want to create a class that can work with **different data types**.
+- Collections: Commonly used with collections such as List<T> or Dictionary<TKey, TValue>. This allows you to create collections that are **strongly typed**, meaning that you can only add or retrieve objects of a specific type.
+
 ## Chapter 5 - Event Driven SE
+
+![Event driven cat meme](https://prdeving.files.wordpress.com/2017/04/image15.png)
 
 ### Delegate
 
@@ -782,9 +914,123 @@ Console.WriteLine(ans); // 7
 
 > **Note** - The last parameter of the `Func` delegate is always the return type.
 
+### Event & EventHandler
+
+An event is a notification sent by an object to signal the occurrence of an action. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/events/)]
+
+[![c# events diagram](https://user-images.githubusercontent.com/60868965/232165006-c184c67d-65bf-445a-94fd-d6f12c037781.png)](https://excalidraw.com/#json=OTDOXh6DdiG-UBdWHg83j,UWsWnjpc8im2YQVOEkM11Q)
+
+When a method is declated using the `event` keyword, you are creating a [**multicast delegate**](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates) that other objects can subscribe to in order to receive notifications when the event is raised.
+
+What is `EventHandler`? It is a built-in delegate that represents a method that handles an event. [[Docs](https://docs.microsoft.com/en-us/dotnet/api/system.eventhandler?view=net-5.0)]
+
+Example:
+
+```csharp
+public class Counter
+{
+    // Define an event called CountReached that can be subscribed to by other parts of the code
+    public event EventHandler CountReached;
+
+    // Define a method that counts from 1 to the specified number and raises the CountReached event
+    public void CountTo(int countTo)
+    {
+        for (int i = 1; i <= countTo; i++)
+        {
+            Console.WriteLine("Counting: " + i);
+
+            // Check if the current count value equals the specified countTo value
+            if (i == countTo)
+            {
+                // Raise the CountReached event is not null
+                OnCountReached();
+            }
+        }
+    }
+
+    private void OnCountReached()
+    {
+        // Invoke the CountReached event
+        CountReached?.Invoke(this, null);
+    }
+}
+```
+
+Then, in the `Main()` method:
+
+```csharp
+// Create an instance of the Counter class
+Counter counter = new Counter();
+
+// Subscribe to the CountReached event of the Counter instance
+counter.CountReached += (a, e) => Console.WriteLine("Count reached");
+
+// Start counting from 1 to 10
+counter.CountTo(5);
+```
+
+In the above example, we create a simple `Counter` class that counts from 1 to a specified number and raises an event called `CountReached` whenever it reaches the specified number.
+
+Output:
+
+```
+Counting: 1
+Counting: 2
+Counting: 3
+Counting: 4
+Counting: 5
+Count reached
+```
+
+### Subscribe/Unsubscribe to an event
+
+Subscribing to an event by using the `+=` operator with an event handler delegate. You can unsubscribe from an event by using the `-=` operator with the same event handler delegate.
+
+```csharp
+// Subscribe to the event
+counter.CountReached += (a, e) => SomeMethod();
+
+// Unsubscribe to the event
+counter.CountReached -= (a, e) => SomeMethod();
+```
+
+### Null safety
+
+Notice that the above example, we use the `?.` operator to invoke the `CountReached` event. This is because the `CountReached` event may be `null` if no one has subscribed to it.
+
+The `?.` operator is called the **null-conditional operator**. It is used to access a member of a variable that may be `null`. [[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/member-access-operators#null-conditional-operators--and-)]
+
+```csharp
+// The following code will throw an exception if the CountReached event is null
+counter.CountReached.Invoke(this, null);
+```
+
 **[⬆ Back to top](#mcte-4327-software-engineering)**
 
+<!-- ## Chapter 6 - Data Structure
+
+### Array
+
+An array is a data structure that contains a **group of elements**. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/)]
+
+```csharp
+int[] arr = new int[3];
+arr[0] = 1;
+arr[1] = 2;
+arr[2] = 3;
+````
+
+### Example usage in daily life
+
+![data structures used in daily life](https://user-images.githubusercontent.com/60868965/231722540-e82c56d4-33f1-4b3c-892b-1f3f379c3c54.png)
+
+[[Source](https://www.linkedin.com/posts/alexxubyte_systemdesign-coding-interviewtips-activity-7051943306309586946-I1Je)]
+
+**[⬆ Back to top](#mcte-4327-software-engineering)** -->
+
 ## Chapter 7 - Graphical User Interface (GUI)
+
+![gui meme](https://i.redd.it/f9kp06jawsu41.jpg)
 
 ~ is a type of interface that allows users to interact with digital devices using **visual elements** such as icons, menus, and buttons, rather than text-based commands.
 
@@ -792,7 +1038,9 @@ Console.WriteLine(ans); // 7
 
 Windows Forms is a graphical user interface (GUI) subsystem provided by the .NET Framework. It is a managed code framework that provides a set of classes and other resources that you can use to create Windows-based applications. [[Docs](https://docs.microsoft.com/en-us/dotnet/desktop/winforms/?view=netdesktop-5.0)]
 
-Example: [Label](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.label?view=windowsdesktop-7.0), [Button](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.button?view=windowsdesktop-7.0) and [MessageBox](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.messagebox?view=windowsdesktop-8.0) elements.
+![label](https://user-images.githubusercontent.com/60868965/231802658-8163c031-e38d-4c25-bae5-2b8963da7a8e.png)
+
+Example: Simple Form with [Button](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.button?view=windowsdesktop-7.0) that opens up [MessageBox](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.messagebox?view=windowsdesktop-8.0).
 
 ```csharp
 static void Main()
@@ -834,11 +1082,12 @@ static void Main()
 
 A timer is a control that raises an event at specified intervals. [[Docs](https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.timer?view=net-5.0)]
 
+In the form, add a `Timer` component from `System.Windows.Forms` namespace and a `Label` component. The `interval` value of the `Timer` is set to 20 (ms).
+
 ```csharp
 // Tick event handler
 private void timer1_Tick(object sender, EventArgs e)
 {
-    // The interval is set to 20 (ms) in the form designer.
     timerLabel.Text = DateTime.Now.ToString("HH:mm:ss, dddd");
 }
 ```
