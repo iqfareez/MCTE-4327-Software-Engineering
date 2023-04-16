@@ -621,6 +621,41 @@ class TestTemperatureConverter
 }
 ```
 
+#### Operator Overloading
+
+Define the behavior of an operator in a way that is specific to the type of data you are using. [[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading)]
+
+Operators that can be overloaded including: `+`, `-`, `*`, `/`, `&`, `==`, and so on. See full list [here](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading#overloadable-operators).
+
+```csharp
+public class Point
+{
+    public int X { get; set; }
+    public int Y { get; set; }
+
+    public Point(int x, int y)
+    {
+        X = x;
+        Y = y;
+    }
+
+    public static Point operator +(Point p1, Point p2)
+    {
+        return new Point(p1.X + p2.X, p1.Y + p2.Y);
+    }
+}
+
+static void Main()
+{
+    Point p1 = new Point(1, 2);
+    Point p2 = new Point(3, 4);
+    Point p3 = p1 + p2;
+    Console.WriteLine(p3.X); // 4
+    Console.WriteLine(p3.Y); // 6
+}
+
+```
+
 ### Inheritance
 
 ~ is a fundamental concept in OOP that allows you to create new classes based on existing ones. Inheritance enables you to **reuse code** from a parent class (also known as a superclass or base class) and extend or modify it in a **child class** (aka a subclass or derived class). This makes your code more organized, easier to read, and less repetitive. [[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance)]
