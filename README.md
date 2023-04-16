@@ -234,7 +234,7 @@ Console.WriteLine(pos2); // 300.2,3.14
 
 Since we have `pos2 = pos1`, `pos2` is a reference to `pos1`. So, when we change the value of `pos1`, `pos2` will also change.
 
-Now, tet's change the `Coordinate` object from `Class` to a `struct`. Now, both value are independent. Changes with `pos1` will not affect `pos2`.
+Now, let's change the `Coordinate` object from `Class` to a `struct`. Now, both value are independent. Changes with `pos1` will not affect `pos2`.
 
 ```csharp
 ...
@@ -525,7 +525,7 @@ Console.WriteLine(diceNumber); // 1-6
 
 ## Chapter 4 - Object Oriented Programming
 
-<img src="https://user-images.githubusercontent.com/60868965/226765764-ac743224-fe9c-49ad-bea5-2d7e8f9abfe9.png" width="50%">
+![meme oop cat table](https://user-images.githubusercontent.com/60868965/226765764-ac743224-fe9c-49ad-bea5-2d7e8f9abfe9.png)
 
 ### 4 Pillars of OOP
 
@@ -619,12 +619,11 @@ class TestTemperatureConverter
         F = TemperatureConverter.CelsiusToFahrenheit(98.2);
     }
 }
-
 ```
 
 ### Inheritance
 
-Inheritance is a fundamental concept in OOP that allows you to create new classes based on existing ones. Inheritance enables you to reuse code from a parent class (also known as a superclass or base class) and extend or modify it in a child class (also known as a subclass or derived class). This makes your code more organized, easier to read, and less repetitive. [[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance)]
+~ is a fundamental concept in OOP that allows you to create new classes based on existing ones. Inheritance enables you to **reuse code** from a parent class (also known as a superclass or base class) and extend or modify it in a **child class** (aka a subclass or derived class). This makes your code more organized, easier to read, and less repetitive. [[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance)]
 
 ```csharp
 using System;
@@ -736,18 +735,62 @@ Console.WriteLine(C.brand); // Myvi
 Console.WriteLine(C.type); // Compact
 ```
 
-### Abstract class
+#### Abstract class
 
 An abstract class is a class that is declared with the `abstract` keyword. An abstract class **may not be instantiated**, but it **may be inherited** by non-abstract subclasses. [[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract)]
 
 ```csharp
 abstract class Painter
 {
-   // implementation
+   // Fields
+   protected string _name;
+   protected int _age;
+
+   // Constructors
+   public Painter(string name, int age)
+   {
+      _name = name;
+      _age = age;
+   }
+
+   // Abstract method
+   public abstract void Paint();
+
+   // Non-abstract method
+   public void Introduction()
+   {
+      Console.WriteLine($"My name is {_name} and I am {_age} years old.");
+   }
 }
+
+class FamousPainter : Painter
+{
+   public FamousPainter(string name, int age) : base(name, age)
+   {
+   }
+
+   // Implementation of abstract method
+   public override void Paint()
+   {
+      Console.WriteLine("I am painting a masterpiece!");
+   }
+}
+
+class Program
+{
+   static void Main(string[] args)
+   {
+      FamousPainter painter = new FamousPainter("Leonardo", 67);
+      painter.Introduction();
+      painter.Paint();
+
+      Console.ReadKey();
+   }
+}
+
 ```
 
-### Interface
+#### Interface
 
 An interface is a reference type that defines a set of methods, properties, events, or indexers that a class or struct **must implement**. [[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/interfaces)]
 
@@ -791,7 +834,7 @@ class Program {
 | Usage          | Typically used to define a base class for a family of related classes. | Used to define a contract that a class must follow.            |
 | Flexibility    | Provides more implementation flexibility.                              | Provides more flexibility in defining the behavior of a class. |
 
-### object
+#### object
 
 The `object` type is the root of the type hierarchy. Every type in C# directly or indirectly derives from the `object` type. [[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types)]
 
@@ -807,7 +850,7 @@ Every object has the following methods:
 - `GetType()` - Gets the `Type` of the current instance.
 - `ToString()` - Returns a string that represents the current object.
 
-### Boxing & unboxing
+##### Boxing & unboxing
 
 Boxing is the process of converting a value type to the `object` type or to any interface type implemented by this value type. Unboxing is the reverse process. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/boxing-and-unboxing)]
 
@@ -823,7 +866,7 @@ string foodStr = (string) foodObj;
 Console.WriteLine(foodStr); // cekodok
 ```
 
-### Generic method
+#### Generic method
 
 A generic method is a method that can be called with arguments of different types. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/generic-methods)]
 
@@ -843,7 +886,7 @@ Console.WriteLine(b); // 1
 
 The example above passes type `int` to the method. But, it is also possible to pass other types such as `string`, `float`, etc.
 
-### Generic class
+#### Generic class
 
 A generic class is a class that can be called with arguments of different types. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/generic-classes)]
 
