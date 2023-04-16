@@ -201,26 +201,11 @@ Read more on [docs](https://learn.microsoft.com/en-us/dotnet/csharp/language-ref
 
 ![reference type](https://www.tutorialsteacher.com/Content/images/csharp/raference-type-memory-allocation.png)
 
-Example of value and reference types:
+Example of **value** types: `int`, `bool`, `char`, `float`, `enum`, `struct`.
 
-```mermaid
-graph TB
-V[Value types] --> A[int]
-V[Value types] --> B[bool]
-V[Value types] --> C[char]
-V[Value types] --> D[float]
-V[Value types] --> G[enum]
-V[Value types] --> H[struct]
+Example of **reference** types: `string`, `object`, `array`, `delegate`.
 
-R[Reference types] --> I[string]
-R[Reference types] --> J[object]
-R[Reference types] --> K[array]
-R[Reference types] --> L[delegate]
-```
-
-Example:
-
-Assume `Coordinate` is a Class
+Example: Assume `Coordinate` is a Class:
 
 ```csharp
 var pos1 = new Coordinate(101.2, 3.14);
