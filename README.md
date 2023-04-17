@@ -555,6 +555,8 @@ class BankAccount
 
 Getter and setter methods are used to access and modify the value of a private field. They are also known as accessor and mutator methods.
 
+Example 1: allow read but prevent write from outside of class
+
 ```csharp
 class BankAccount
 {
@@ -576,6 +578,32 @@ class BankAccount
         Balance -= amount;
     }
 }
+```
+
+Example 2: Make methods behave like properties
+
+```csharp
+class Person
+{
+    private string name;
+    private int age;
+
+    public Person(string name, int age)
+    {
+        this.name = name;
+        this.age = age;
+    }
+
+    public string Introduction
+    {
+        get { return "Hi, my name is " + name + " and I am " + age + " years old."; }
+    }
+}
+
+// in Main()
+Person person = new Person("John", 30);
+Console.WriteLine(person.Introduction);
+// Output: Hi, my name is John and I am 30 years old.
 ```
 
 #### `static` keyword
