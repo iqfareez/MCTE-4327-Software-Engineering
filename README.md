@@ -10,6 +10,7 @@
 - [Chapter 3 - Primitive Data Types](#chapter-3---primitive-data-types)
 - [Chapter 4 - Object Oriented Programming](#chapter-4---object-oriented-programming)
 - [Chapter 5 - Event Driven SE](#chapter-5---event-driven-se)
+- [Chapter 6 - Data Structures](#chapter-6---data-structures)
 - [Chapter 7 - Graphical User Interface (GUI)](#chapter-7---graphical-user-interface-gui)
 
 ## Chapter 1 - Introduction
@@ -896,7 +897,7 @@ Every object has the following methods:
 - `Equals()` - Determines whether the specified object is equal to the current object.
 - `GetHashCode()` - Serves as the default hash function.
 - `GetType()` - Gets the `Type` of the current instance.
-- `ToString()` - Returns a string that represents the current object.
+- [`ToString()`](#tostring-method) - Returns a string that represents the current object.
 
 ##### Boxing & unboxing
 
@@ -1098,18 +1099,107 @@ counter.CountReached.Invoke(this, null);
 
 **[⬆ Back to top](#mcte-4327-software-engineering)**
 
-<!-- ## Chapter 6 - Data Structure
+## Chapter 6 - Data Structures
 
 ### Array
 
 An array is a data structure that contains a **group of elements**. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/)]
+
+- Implicit base class for all single and multidiemensional arrays
+- An aray can contain value-type or reference-type elements.
 
 ```csharp
 int[] arr = new int[3];
 arr[0] = 1;
 arr[1] = 2;
 arr[2] = 3;
-````
+```
+
+#### Equality check
+
+Even though two arrays can contains the same elements, it will fail the equality check because they are two different objects.
+
+```csharp
+string[] arr1 = { "a", "b", "c" };
+string[] arr2 = { "a", "b", "c" };
+Console.WriteLine(arr1 == arr2); // False
+```
+
+#### Finding items
+
+##### Finding one item
+
+Searches for an element that matches the conditions defined by the specified predicate, and returns the first occurrence within the entire Array. [[Docs]](https://learn.microsoft.com/en-us/dotnet/api/system.array.find?view=net-7.0)
+
+```csharp
+using System;
+
+string[] cats = { "Tom", "Jerry", "Coklat", "Garfield", "Comel" };
+var match = Array.Find(cats, s => s.StartsWith("C"));
+// Result: match = "Coklat"
+```
+
+##### Finding multiple items
+
+Retrieves all the elements that match the conditions defined by the specified predicate. [[Docs]](https://learn.microsoft.com/en-us/dotnet/api/system.array.findall?view=net-7.0)
+
+```csharp
+using System;
+
+string[] cats = { "Tom", "Jerry", "Coklat", "Garfield", "Comel" };
+var matches = Array.FindAll(cats, s => s.StartsWith("C"));
+// Result: matches = {"Coklat", "Comel"}
+```
+
+#### Sort
+
+Sorts the elements in a one-dimensional array. This will sort the elements of the array in **ascending** order. [[Docs]](https://learn.microsoft.com/en-us/dotnet/api/system.array.sort?view=net-7.0)
+
+```csharp
+using System;
+
+string[] cats = { "Tom", "Jerry", "Coklat", "Garfield", "Comel" };
+Array.Sort(cats);
+// Output: { "Coklat", "Comel", "Garfield", "Jerry", "Tom" }
+```
+
+#### Reverse sort
+
+To sort the elements in **descending** order, you can use the `Array.Reverse()` method after using `Array.Sort()`. It reverses the order of the elements in a one-dimensional Array or in a portion of the Array. [[Docs]](https://learn.microsoft.com/en-us/dotnet/api/system.array.reverse?view=net-7.0)
+
+```csharp
+string[] cats = { "Tom", "Jerry", "Coklat", "Garfield", "Comel" };
+Array.Sort(cats);
+Array.Reverse(cats);
+// Output: { "Tom", "Jerry", "Garfield", "Comel", "Coklat" }
+```
+
+### List
+
+Represents a strongly typed list of objects that can be accessed by index. Provides methods to search, sort, and manipulate lists. [[Docs](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-8.0)]
+
+```csharp
+using System.Collections.Generic;
+
+// Initializing List
+List<string> hariRayaDishes = new List<string>() { "Rendang", "Satay", "Ketupat", };
+
+// Add item to list
+hariRayaDishes.Add("Lontong");
+hariRayaDishes.Add("Dodol");
+
+// Remove item from list
+hariRayaDishes.Remove("Satay");
+// alternatively, remove by index:
+// hariRayaDishes.RemoveAt(1);
+
+// number of items in list
+Console.WriteLine(hariRayaDishes.Count);
+
+// check if item exists in list
+hariRayaDishes.Contains("Rendang"); // true
+hariRayaDishes.Contains("Mee Kari"); // false
+```
 
 ### Example usage in daily life
 
@@ -1117,7 +1207,7 @@ arr[2] = 3;
 
 [[Source](https://www.linkedin.com/posts/alexxubyte_systemdesign-coding-interviewtips-activity-7051943306309586946-I1Je)]
 
-**[⬆ Back to top](#mcte-4327-software-engineering)** -->
+**[⬆ Back to top](#mcte-4327-software-engineering)**
 
 ## Chapter 7 - Graphical User Interface (GUI)
 
