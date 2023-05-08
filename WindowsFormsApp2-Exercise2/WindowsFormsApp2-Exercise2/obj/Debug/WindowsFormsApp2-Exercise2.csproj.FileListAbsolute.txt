@@ -1,0 +1,9 @@
+C:\Users\Registration\Desktop\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\bin\Debug\WindowsFormsApp2-Exercise2.exe.config
+C:\Users\Registration\Desktop\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\bin\Debug\WindowsFormsApp2-Exercise2.exe
+C:\Users\Registration\Desktop\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\bin\Debug\WindowsFormsApp2-Exercise2.pdb
+C:\Users\Registration\Desktop\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\obj\Debug\WindowsFormsApp2_Exercise2.Form1.resources
+C:\Users\Registration\Desktop\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\obj\Debug\WindowsFormsApp2_Exercise2.Properties.Resources.resources
+C:\Users\Registration\Desktop\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\obj\Debug\WindowsFormsApp2-Exercise2.csproj.GenerateResource.cache
+C:\Users\Registration\Desktop\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\obj\Debug\WindowsFormsApp2-Exercise2.csproj.CoreCompileInputs.cache
+C:\Users\Registration\Desktop\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\obj\Debug\WindowsFormsApp2-Exercise2.exe
+C:\Users\Registration\Desktop\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\obj\Debug\WindowsFormsApp2-Exercise2.pdb

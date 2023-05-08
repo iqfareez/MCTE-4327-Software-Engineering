@@ -1,0 +1,10 @@
+C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\bin\Debug\WindowsFormsApp1-GUI-form.exe.config
+C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\bin\Debug\WindowsFormsApp1-GUI-form.exe
+C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\bin\Debug\WindowsFormsApp1-GUI-form.pdb
+C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\obj\Debug\WindowsFormsApp1-GUI-form.csproj.AssemblyReference.cache
+C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\obj\Debug\WindowsFormsApp1_GUI_form.Form1.resources
+C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\obj\Debug\WindowsFormsApp1_GUI_form.Properties.Resources.resources
+C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\obj\Debug\WindowsFormsApp1-GUI-form.csproj.GenerateResource.cache
+C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\obj\Debug\WindowsFormsApp1-GUI-form.csproj.CoreCompileInputs.cache
+C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\obj\Debug\WindowsFormsApp1-GUI-form.exe
+C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\obj\Debug\WindowsFormsApp1-GUI-form.pdb
