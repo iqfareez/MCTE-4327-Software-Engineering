@@ -7,3 +7,14 @@ C:\Users\Registration\Desktop\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exerci
 C:\Users\Registration\Desktop\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\obj\Debug\WindowsFormsApp2-Exercise2.csproj.CoreCompileInputs.cache
 C:\Users\Registration\Desktop\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\obj\Debug\WindowsFormsApp2-Exercise2.exe
 C:\Users\Registration\Desktop\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\obj\Debug\WindowsFormsApp2-Exercise2.pdb
+D:\Iqmal\Documents\software-eng\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\bin\Debug\WindowsFormsApp2-Exercise2.exe.config
+D:\Iqmal\Documents\software-eng\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\bin\Debug\WindowsFormsApp2-Exercise2.exe
+D:\Iqmal\Documents\software-eng\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\bin\Debug\WindowsFormsApp2-Exercise2.pdb
+D:\Iqmal\Documents\software-eng\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\obj\Debug\WindowsFormsApp2-Exercise2.csproj.AssemblyReference.cache
+D:\Iqmal\Documents\software-eng\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\obj\Debug\WindowsFormsApp2-Exercise2.csproj.SuggestedBindingRedirects.cache
+D:\Iqmal\Documents\software-eng\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\obj\Debug\WindowsFormsApp2_Exercise2.Form1.resources
+D:\Iqmal\Documents\software-eng\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\obj\Debug\WindowsFormsApp2_Exercise2.Properties.Resources.resources
+D:\Iqmal\Documents\software-eng\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\obj\Debug\WindowsFormsApp2-Exercise2.csproj.GenerateResource.cache
+D:\Iqmal\Documents\software-eng\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\obj\Debug\WindowsFormsApp2-Exercise2.csproj.CoreCompileInputs.cache
+D:\Iqmal\Documents\software-eng\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\obj\Debug\WindowsFormsApp2-Exercise2.exe
+D:\Iqmal\Documents\software-eng\WindowsFormsApp2-Exercise2\WindowsFormsApp2-Exercise2\obj\Debug\WindowsFormsApp2-Exercise2.pdb

@@ -8,3 +8,14 @@ C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-for
 C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\obj\Debug\WindowsFormsApp1-GUI-form.csproj.CoreCompileInputs.cache
 C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\obj\Debug\WindowsFormsApp1-GUI-form.exe
 C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\obj\Debug\WindowsFormsApp1-GUI-form.pdb
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\bin\Debug\WindowsFormsApp1-GUI-form.exe.config
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\bin\Debug\WindowsFormsApp1-GUI-form.exe
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\bin\Debug\WindowsFormsApp1-GUI-form.pdb
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\obj\Debug\WindowsFormsApp1-GUI-form.csproj.AssemblyReference.cache
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\obj\Debug\WindowsFormsApp1-GUI-form.csproj.SuggestedBindingRedirects.cache
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\obj\Debug\WindowsFormsApp1_GUI_form.Form1.resources
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\obj\Debug\WindowsFormsApp1_GUI_form.Properties.Resources.resources
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\obj\Debug\WindowsFormsApp1-GUI-form.csproj.GenerateResource.cache
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\obj\Debug\WindowsFormsApp1-GUI-form.csproj.CoreCompileInputs.cache
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\obj\Debug\WindowsFormsApp1-GUI-form.exe
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-form\WindowsFormsApp1-GUI-form\obj\Debug\WindowsFormsApp1-GUI-form.pdb
