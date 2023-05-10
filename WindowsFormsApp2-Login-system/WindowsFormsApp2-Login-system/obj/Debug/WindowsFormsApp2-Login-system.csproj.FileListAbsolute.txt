@@ -1,0 +1,11 @@
+C:\Users\Registration\Desktop\WindowsFormsApp2-Login-system\WindowsFormsApp2-Login-system\bin\Debug\WindowsFormsApp2-Login-system.exe.config
+C:\Users\Registration\Desktop\WindowsFormsApp2-Login-system\WindowsFormsApp2-Login-system\bin\Debug\WindowsFormsApp2-Login-system.exe
+C:\Users\Registration\Desktop\WindowsFormsApp2-Login-system\WindowsFormsApp2-Login-system\bin\Debug\WindowsFormsApp2-Login-system.pdb
+C:\Users\Registration\Desktop\WindowsFormsApp2-Login-system\WindowsFormsApp2-Login-system\obj\Debug\WindowsFormsApp2-Login-system.csproj.AssemblyReference.cache
+C:\Users\Registration\Desktop\WindowsFormsApp2-Login-system\WindowsFormsApp2-Login-system\obj\Debug\WindowsFormsApp2_Login_system.Form1.resources
+C:\Users\Registration\Desktop\WindowsFormsApp2-Login-system\WindowsFormsApp2-Login-system\obj\Debug\WindowsFormsApp2_Login_system.Properties.Resources.resources
+C:\Users\Registration\Desktop\WindowsFormsApp2-Login-system\WindowsFormsApp2-Login-system\obj\Debug\WindowsFormsApp2-Login-system.csproj.GenerateResource.cache
+C:\Users\Registration\Desktop\WindowsFormsApp2-Login-system\WindowsFormsApp2-Login-system\obj\Debug\WindowsFormsApp2-Login-system.csproj.CoreCompileInputs.cache
+C:\Users\Registration\Desktop\WindowsFormsApp2-Login-system\WindowsFormsApp2-Login-system\obj\Debug\WindowsFormsApp2-Login-system.exe
+C:\Users\Registration\Desktop\WindowsFormsApp2-Login-system\WindowsFormsApp2-Login-system\obj\Debug\WindowsFormsApp2-Login-system.pdb
+C:\Users\Registration\Desktop\WindowsFormsApp2-Login-system\WindowsFormsApp2-Login-system\obj\Debug\WindowsFormsApp2_Login_system.Form2.resources

@@ -1,0 +1,10 @@
+1,John Smith,25,USA
+2,Jane Doe,30,Canada
+3,Bob Johnson,45,Australia
+4,Samantha Lee,22,Singapore
+5,Mike Brown,38,UK
+6,Kate Williams,29,Ireland
+7,Tom Lee,50,Hong Kong
+8,Lisa Chen,27,Taiwan
+9,Daniel Kim,33,Korea
+10,Amy Wong,20,Hong Kong
