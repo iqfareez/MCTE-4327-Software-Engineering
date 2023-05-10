@@ -1389,6 +1389,31 @@ static void Main()
 
 ![example1](https://imgur.com/VI03OCm.png)
 
+### Some examples:
+
+#### Update text for a label
+
+```csharp
+answerLabel.Text = "Answer: " + output.ToString();
+```
+
+#### Opening a new Window/Form
+
+```csharp
+var myForm = new Form2();
+myForm.Show();
+```
+
+#### Adding row to DataGridView
+
+```csharp
+for (var i = 0; i < lines.Length; i += 1)
+{
+    var data = lines[i].Split(',');
+    dataGridView1.Rows.Add(data);
+}
+```
+
 ### Timer
 
 A timer is a control that raises an event at specified intervals. [[Docs](https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.timer?view=net-5.0)]
