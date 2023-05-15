@@ -1,0 +1,7 @@
+C:\Users\Registration\Desktop\ConsoleApp1-AsyncSE-15-5-2023\ConsoleApp1-AsyncSE-15-5-2023\bin\Debug\ConsoleApp1-AsyncSE-15-5-2023.exe.config
+C:\Users\Registration\Desktop\ConsoleApp1-AsyncSE-15-5-2023\ConsoleApp1-AsyncSE-15-5-2023\bin\Debug\ConsoleApp1-AsyncSE-15-5-2023.exe
+C:\Users\Registration\Desktop\ConsoleApp1-AsyncSE-15-5-2023\ConsoleApp1-AsyncSE-15-5-2023\bin\Debug\ConsoleApp1-AsyncSE-15-5-2023.pdb
+C:\Users\Registration\Desktop\ConsoleApp1-AsyncSE-15-5-2023\ConsoleApp1-AsyncSE-15-5-2023\obj\Debug\ConsoleApp1-AsyncSE-15-5-2023.csproj.AssemblyReference.cache
+C:\Users\Registration\Desktop\ConsoleApp1-AsyncSE-15-5-2023\ConsoleApp1-AsyncSE-15-5-2023\obj\Debug\ConsoleApp1-AsyncSE-15-5-2023.csproj.CoreCompileInputs.cache
+C:\Users\Registration\Desktop\ConsoleApp1-AsyncSE-15-5-2023\ConsoleApp1-AsyncSE-15-5-2023\obj\Debug\ConsoleApp1-AsyncSE-15-5-2023.exe
+C:\Users\Registration\Desktop\ConsoleApp1-AsyncSE-15-5-2023\ConsoleApp1-AsyncSE-15-5-2023\obj\Debug\ConsoleApp1-AsyncSE-15-5-2023.pdb
