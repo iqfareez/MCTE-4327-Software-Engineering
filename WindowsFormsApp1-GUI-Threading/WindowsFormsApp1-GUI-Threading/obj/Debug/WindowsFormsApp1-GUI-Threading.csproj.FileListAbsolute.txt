@@ -1,0 +1,10 @@
+C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\bin\Debug\WindowsFormsApp1-GUI-Threading.exe.config
+C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\bin\Debug\WindowsFormsApp1-GUI-Threading.exe
+C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\bin\Debug\WindowsFormsApp1-GUI-Threading.pdb
+C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\obj\Debug\WindowsFormsApp1-GUI-Threading.csproj.AssemblyReference.cache
+C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\obj\Debug\WindowsFormsApp1_GUI_Threading.Form1.resources
+C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\obj\Debug\WindowsFormsApp1_GUI_Threading.Properties.Resources.resources
+C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\obj\Debug\WindowsFormsApp1-GUI-Threading.csproj.GenerateResource.cache
+C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\obj\Debug\WindowsFormsApp1-GUI-Threading.csproj.CoreCompileInputs.cache
+C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\obj\Debug\WindowsFormsApp1-GUI-Threading.exe
+C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\obj\Debug\WindowsFormsApp1-GUI-Threading.pdb
