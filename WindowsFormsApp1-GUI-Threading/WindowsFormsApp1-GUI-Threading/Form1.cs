@@ -30,13 +30,13 @@ namespace WindowsFormsApp1_GUI_Threading
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //button1.Enabled = false; // disable button
-            //label2.Text = "Processing...";
+            button1.Enabled = false; // disable button
+            label2.Text = "Processing...";
 
-            //var t1 = new Thread(Process);
-            //t1.Start();            
+            var t1 = new Thread(Process);
+            t1.Start();            
 
-            Process2();
+            // Process2();
         }
 
         private void Process2()

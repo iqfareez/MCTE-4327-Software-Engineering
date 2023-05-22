@@ -8,3 +8,14 @@ C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GU
 C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\obj\Debug\WindowsFormsApp1-GUI-Threading.csproj.CoreCompileInputs.cache
 C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\obj\Debug\WindowsFormsApp1-GUI-Threading.exe
 C:\Users\Registration\Desktop\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\obj\Debug\WindowsFormsApp1-GUI-Threading.pdb
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\bin\Debug\WindowsFormsApp1-GUI-Threading.exe.config
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\bin\Debug\WindowsFormsApp1-GUI-Threading.exe
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\bin\Debug\WindowsFormsApp1-GUI-Threading.pdb
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\obj\Debug\WindowsFormsApp1-GUI-Threading.csproj.AssemblyReference.cache
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\obj\Debug\WindowsFormsApp1-GUI-Threading.csproj.SuggestedBindingRedirects.cache
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\obj\Debug\WindowsFormsApp1_GUI_Threading.Form1.resources
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\obj\Debug\WindowsFormsApp1_GUI_Threading.Properties.Resources.resources
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\obj\Debug\WindowsFormsApp1-GUI-Threading.csproj.GenerateResource.cache
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\obj\Debug\WindowsFormsApp1-GUI-Threading.csproj.CoreCompileInputs.cache
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\obj\Debug\WindowsFormsApp1-GUI-Threading.exe
+D:\Iqmal\Documents\software-eng\WindowsFormsApp1-GUI-Threading\WindowsFormsApp1-GUI-Threading\obj\Debug\WindowsFormsApp1-GUI-Threading.pdb

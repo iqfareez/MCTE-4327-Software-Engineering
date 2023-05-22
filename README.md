@@ -12,6 +12,8 @@
 - [Chapter 5 - Event Driven SE](#chapter-5---event-driven-se)
 - [Chapter 6 - Data Structures](#chapter-6---data-structures)
 - [Chapter 7 - Graphical User Interface (GUI)](#chapter-7---graphical-user-interface-gui)
+- [Chapter 8 - Asynchronous Software Engineering](#chapter-8---asynchronous-se)
+- [Chapter 9 - Parallel Computing](#chapter-8---parallel-computing)
 
 ## Chapter 1 - Introduction
 
@@ -478,7 +480,7 @@ int arg1 = int.Parse(args[0]);
 
 ### Exception Handling
 
-![try/catch meme](https://miro.medium.com/v2/resize:fit:799/1*IZMVVaaAWxOhep_D-ly0gQ.jpeg)
+![try/catch meme](https://i.redd.it/ozm77v3hip0b1.jpg)
 
 An exception is an **event**, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions. [[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/exceptions/)]
 
@@ -1101,6 +1103,8 @@ counter.CountReached.Invoke(this, null);
 
 ## Chapter 6 - Data Structures
 
+![Data structures meme](https://programmercave0.github.io/assets/Memes-Linkedlist/llmeme2.jpg)
+
 ### Array
 
 An array is a data structure that contains a **group of elements**. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/)]
@@ -1435,6 +1439,220 @@ When you set the `Interval` property to a positive integer value, the `Timer` st
 To learn more on date & time formatting, visit [here](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings).
 
 **[⬆ Back to top](#mcte-4327-software-engineering)**
+
+## Chapter 8 - Asynchronous SE
+
+![Asynchronous SE be like](https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/2ec6db21-b7f0-440d-8945-5b8cea885168)
+
+Asynchronous programming in allows you to write code that can perform tasks **without blocking the main thread**, improving the responsiveness of your application.
+
+### Thread
+
+In computing, a thread is the **smallest unit of execution** that can be scheduled by an operating system's scheduler.
+
+In the context of asynchronous programming, threads are often used **to execute tasks in parallel** or **to avoid blocking** the main thread. For example, when you perform an I/O operation that might take some time to complete, such as reading a file from disk or downloading data from the internet, you can create a new thread to handle that operation while the main thread continues to run other tasks. [[Docs]](https://learn.microsoft.com/en-us/dotnet/api/system.threading.thread?view=net-7.0)
+
+#### Creating a new thread
+
+```csharp
+using System;
+using System.Threading;
+
+public class Program
+{
+    public static void MyThreadFunction()
+    {
+        Console.WriteLine("Thread is running...");
+    }
+
+    public static void Main()
+    {
+        Thread thread = new Thread(MyThreadFunction);
+        thread.Start();
+    }
+}
+```
+
+#### `.Join()` & `.Sleep()` methods
+
+`.Join()` - Block the calling thread until the thread being joined completes. This is often used to ensure that a thread has finished executing before continuing with the rest of the program. [[Docs]](https://learn.microsoft.com/en-us/dotnet/api/system.threading.thread.join?view=net-7.0)
+
+`.Sleep()` - Suspend the execution of the current thread for a specified amount of time. [[Docs]](https://learn.microsoft.com/en-us/dotnet/api/system.threading.thread.sleep?view=net-7.0)
+
+Below is the example of those function working together:
+
+```csharp
+using System;
+using System.Threading;
+
+public class Program
+{
+    public static void MyThreadFunction()
+    {
+        Console.WriteLine("Thread is running...");
+        Thread.Sleep(3000); // Simulate some work
+        Console.WriteLine("Thread is done.");
+    }
+
+    public static void Main()
+    {
+        Thread thread = new Thread(MyThreadFunction);
+        thread.Start();
+
+        Console.WriteLine("Waiting for thread to complete...");
+        thread.Join();
+
+        Console.WriteLine("Thread has completed.");
+    }
+}
+```
+
+### Thread Safety
+
+Thread safety means ensuring that a program behaves correctly and predictably when multiple threads are executing at the same time.
+
+The `lock` keyword in C# is used to prevent multiple threads from accessing the same code block **simultaneously**. It helps prevent problems that can occur when multiple threads try to access shared resources at the same time. [[Docs]](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/lock)
+
+This helps to prevent [race conditions](https://www.techtarget.com/searchstorage/definition/race-condition) and other [concurrency](https://web.mit.edu/6.005/www/fa14/classes/17-concurrency/)-related issues that can arise when multiple threads access shared resources.
+
+#### Sharing global variables among threads
+
+```csharp
+using System;
+using System.Threading;
+
+public class Program
+{
+    private static int count = 0;
+    private static readonly object lockObject = new object();
+
+    public static void IncrementCount()
+    {
+        lock (lockObject)
+        {
+            int temp = count;
+            Thread.Sleep(100); // Simulate some work
+            count = temp + 1;
+        }
+    }
+
+    public static void Main()
+    {
+        Thread[] threads = new Thread[10];
+
+        for (int i = 0; i < threads.Length; i++)
+        {
+            threads[i] = new Thread(IncrementCount);
+            threads[i].Start();
+        }
+
+        for (int i = 0; i < threads.Length; i++)
+        {
+            threads[i].Join();
+        }
+
+        Console.WriteLine("Final count: " + count);
+    }
+}
+```
+
+#### Sending signal among threads
+
+The `AutoResetEvent` class represents a thread synchronization event that, when signaled, resets automatically after releasing a single waiting thread. [[Docs]](https://learn.microsoft.com/en-us/dotnet/api/system.threading.autoresetevent?view=net-5.0)
+
+```csharp
+class Program
+{
+    static AutoResetEvent autoEvent;
+
+    static void Main(string[] args)
+    {
+        autoEvent = new AutoResetEvent(false);
+
+        Console.WriteLine("Press any key to start the program");
+        Console.ReadKey();
+
+        new Thread(ThreadProcess).Start();
+
+        // To wait for any signal
+        while(true)
+        {
+            // Wait for the Signal
+            autoEvent.WaitOne();
+
+            // Signal is detected
+            Console.WriteLine("Auto Reset Event is signalled");
+        }
+    }
+
+    static void ThreadProcess()
+    {
+        Console.WriteLine("Thread Starting");
+        Thread.Sleep(3000);
+
+        // Signal is set
+        autoEvent.Set();
+    }
+}
+```
+
+### Thread pool
+
+A thread pool is a **collection of threads** that can be used to perform several tasks in the background. It is a common technique used to optimize the performance of applications that use multiple threads to perform long-running asynchronous tasks. [[Docs]](https://learn.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool)
+
+Docs and example code using `Task` class -> https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-7.0
+
+## Chapter 9 - Parallel Computing
+
+![parallel computing meme](https://i.redd.it/9tu18n684z331.jpg)
+
+### Key concepts
+
+- Break down a problem into smaller tasks
+- Execute the tasks simultaneously on multiple processors
+- Combine the results of the tasks to get the final result
+
+### Parallel.For
+
+Executes a for loop in which iterations may run in parallel. [[Docs]](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.parallel.for?view=net-5.0)
+
+```csharp
+using System;
+using System.Threading.Tasks;
+
+public class Program
+{
+    public static void Main()
+    {
+        Parallel.For(0, 10, i =>
+        {
+            Console.WriteLine("i = " + i);
+        });
+    }
+}
+```
+
+### Parallel.ForEach
+
+Executes a foreach operation on an `IEnumerable` in which iterations may run in parallel. [[Docs]](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.parallel.foreach?view=net-5.0)
+
+```csharp
+using System;
+using System.Threading.Tasks;
+
+public class Program
+{
+    public static void Main()
+    {
+        string[] names = { "Alice", "Bob", "Charlie", "Dave" };
+
+        Parallel.ForEach(names, name =>
+        {
+            Console.WriteLine("Hello " + name);
+        });
+    }
+}
+```
 
 <!-- ## Chapter 12 - Software Security
 
