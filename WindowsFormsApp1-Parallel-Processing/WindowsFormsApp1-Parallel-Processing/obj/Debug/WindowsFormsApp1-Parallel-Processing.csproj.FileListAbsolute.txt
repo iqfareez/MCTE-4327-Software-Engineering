@@ -1,0 +1,10 @@
+C:\Users\Registration\Desktop\WindowsFormsApp1-Parallel-Processing\WindowsFormsApp1-Parallel-Processing\bin\Debug\WindowsFormsApp1-Parallel-Processing.exe.config
+C:\Users\Registration\Desktop\WindowsFormsApp1-Parallel-Processing\WindowsFormsApp1-Parallel-Processing\bin\Debug\WindowsFormsApp1-Parallel-Processing.exe
+C:\Users\Registration\Desktop\WindowsFormsApp1-Parallel-Processing\WindowsFormsApp1-Parallel-Processing\bin\Debug\WindowsFormsApp1-Parallel-Processing.pdb
+C:\Users\Registration\Desktop\WindowsFormsApp1-Parallel-Processing\WindowsFormsApp1-Parallel-Processing\obj\Debug\WindowsFormsApp1-Parallel-Processing.csproj.AssemblyReference.cache
+C:\Users\Registration\Desktop\WindowsFormsApp1-Parallel-Processing\WindowsFormsApp1-Parallel-Processing\obj\Debug\WindowsFormsApp1_Parallel_Processing.Form1.resources
+C:\Users\Registration\Desktop\WindowsFormsApp1-Parallel-Processing\WindowsFormsApp1-Parallel-Processing\obj\Debug\WindowsFormsApp1_Parallel_Processing.Properties.Resources.resources
+C:\Users\Registration\Desktop\WindowsFormsApp1-Parallel-Processing\WindowsFormsApp1-Parallel-Processing\obj\Debug\WindowsFormsApp1-Parallel-Processing.csproj.GenerateResource.cache
+C:\Users\Registration\Desktop\WindowsFormsApp1-Parallel-Processing\WindowsFormsApp1-Parallel-Processing\obj\Debug\WindowsFormsApp1-Parallel-Processing.csproj.CoreCompileInputs.cache
+C:\Users\Registration\Desktop\WindowsFormsApp1-Parallel-Processing\WindowsFormsApp1-Parallel-Processing\obj\Debug\WindowsFormsApp1-Parallel-Processing.exe
+C:\Users\Registration\Desktop\WindowsFormsApp1-Parallel-Processing\WindowsFormsApp1-Parallel-Processing\obj\Debug\WindowsFormsApp1-Parallel-Processing.pdb
