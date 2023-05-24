@@ -12,33 +12,74 @@ namespace ConsoleApp3_TCP_Server
     {
         static void Main(string[] args)
         {
-            TcpConnect();
+            Server();
         }
 
-        static async void TcpConnect()
+        private static void Server()
         {
-            var ipEndPoint = new IPEndPoint(IPAddress.Any, 13);
-            TcpListener listener = new TcpListener(ipEndPoint);
-
+            TcpListener server = null;
             try
             {
-                listener.Start();
+                // Set the TcpListener on port 13000.
+                Int32 port = 13000;
+                IPAddress localAddr = IPAddress.Parse("127.0.0.1");
 
-                TcpClient handler = await listener.AcceptTcpClientAsync();
-                await using NetworkStream stream = handler.GetStream();
+                // TcpListener server = new TcpListener(port);
+                server = new TcpListener(localAddr, port);
 
-                var message = $"📅 {DateTime.Now} 🕛";
-                var dateTimeBytes = Encoding.UTF8.GetBytes(message);
-                await stream.WriteAsync(dateTimeBytes);
+                // Start listening for client requests.
+                server.Start();
 
-                Console.WriteLine($"Sent message: \"{message}\"");
-                // Sample output:
-                //     Sent message: "📅 8/22/2022 9:07:17 AM 🕛"
+                // Buffer for reading data
+                Byte[] bytes = new Byte[256];
+                String data = null;
+
+                // Enter the listening loop.
+                while(true)
+                {
+                    Console.Write("Waiting for a connection... ");
+
+                    // Perform a blocking call to accept requests.
+                    // You could also use server.AcceptSocket() here.
+                    TcpClient client = server.AcceptTcpClient();
+                    Console.WriteLine("Connected!");
+
+                    data = null;
+
+                    // Get a stream object for reading and writing
+                    NetworkStream stream = client.GetStream();
+
+                    int i;
+
+                    // Loop to receive all the data sent by the client.
+                    while((i = stream.Read(bytes, 0, bytes.Length))!=0)
+                    {
+                        // Translate data bytes to a ASCII string.
+                        data = System.Text.Encoding.ASCII.GetString(bytes, 0, i);
+                        Console.WriteLine("Received: {0}", data);
+
+                        // Process the data sent by the client.
+                        data = data.ToUpper();
+
+                        byte[] msg = System.Text.Encoding.ASCII.GetBytes(data);
+
+                        // Send back a response.
+                        stream.Write(msg, 0, msg.Length);
+                        Console.WriteLine("Sent: {0}", data);
+                    }
+                }
+            }
+            catch(SocketException e)
+            {
+                Console.WriteLine("SocketException: {0}", e);
             }
             finally
             {
-                listener.Stop();
+                server.Stop();
             }
+
+            Console.WriteLine("\nHit enter to continue...");
+            Console.Read();
         }
     }
 }
