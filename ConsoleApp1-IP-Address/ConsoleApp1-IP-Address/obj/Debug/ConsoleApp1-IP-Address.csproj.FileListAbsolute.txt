@@ -1,0 +1,7 @@
+C:\Users\Registration\Desktop\ConsoleApp1-IP-Address\ConsoleApp1-IP-Address\bin\Debug\ConsoleApp1-IP-Address.exe.config
+C:\Users\Registration\Desktop\ConsoleApp1-IP-Address\ConsoleApp1-IP-Address\bin\Debug\ConsoleApp1-IP-Address.exe
+C:\Users\Registration\Desktop\ConsoleApp1-IP-Address\ConsoleApp1-IP-Address\bin\Debug\ConsoleApp1-IP-Address.pdb
+C:\Users\Registration\Desktop\ConsoleApp1-IP-Address\ConsoleApp1-IP-Address\obj\Debug\ConsoleApp1-IP-Address.csproj.AssemblyReference.cache
+C:\Users\Registration\Desktop\ConsoleApp1-IP-Address\ConsoleApp1-IP-Address\obj\Debug\ConsoleApp1-IP-Address.csproj.CoreCompileInputs.cache
+C:\Users\Registration\Desktop\ConsoleApp1-IP-Address\ConsoleApp1-IP-Address\obj\Debug\ConsoleApp1-IP-Address.exe
+C:\Users\Registration\Desktop\ConsoleApp1-IP-Address\ConsoleApp1-IP-Address\obj\Debug\ConsoleApp1-IP-Address.pdb
