@@ -14,6 +14,7 @@
 - [Chapter 7 - Graphical User Interface (GUI)](#chapter-7---graphical-user-interface-gui)
 - [Chapter 8 - Asynchronous Software Engineering](#chapter-8---asynchronous-se)
 - [Chapter 9 - Parallel Computing](#chapter-8---parallel-computing)
+- [Chapter 10 - Networking & Communication](#chapter-10---networking--communication)
 
 ## Chapter 1 - Introduction
 
@@ -1653,6 +1654,54 @@ public class Program
     }
 }
 ```
+
+## Chapter 10 - Networking & Communication
+
+Networking and communication are vital aspects of software engineering, facilitating seamless interaction and enabling the creation of interconnected software solutions.
+
+### Protocols
+
+A protocol refers to a set of rules and guidelines that govern the exchange of data between devices or systems.
+
+| Protocol                                 | Description                                                                                                                       | Usage                                                                                                                                                   |
+| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **TCP** (Transmission Control Protocol)  | A reliable, connection-oriented protocol that ensures data integrity and sequencing during transmission.                          | Used for applications that require reliable and ordered delivery of data, such as web browsing and file transfer.                                       |
+| **UDP** (User Datagram Protocol)         | A lightweight, connectionless protocol that provides fast, but unreliable data transmission without error checking or sequencing. | Suitable for applications that prioritize speed and can tolerate occasional loss or duplication of data, such as real-time streaming and online gaming. |
+| **HTTP** (Hypertext Transfer Protocol)   | A protocol that enables communication between web browsers and servers, facilitating the retrieval and display of web content.    | Used for accessing and transferring data on the World Wide Web, commonly used for web browsing and APIs.                                                |
+| **FTP** (File Transfer Protocol)         | A standard network protocol used for the transfer of files between a client and a server over a computer network.                 | Commonly employed for uploading and downloading files to and from servers.                                                                              |
+| **SMTP** (Simple Mail Transfer Protocol) | A protocol for sending and receiving email messages between mail servers, enabling reliable email communication.                  | Used for sending and routing email messages over the internet, widely used for email transmission and delivery.                                         |
+
+Some more examples: SSH, Telnet, TLS/SSL, IMAP etc.
+
+### URI
+
+**Uniform Resource Identifier**. It is a string of characters used to identify and locate resources on the internet. Example of URI schemes: `irc://`, `mailto://`, `ftp://`, `http://`, `https://`, `file://`, `data://` etc.
+
+### IP Address
+
+An **Internet Protocol address** is a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication. [[Wiki]](https://en.wikipedia.org/wiki/IP_address)
+
+![private vs public ip](https://www.pragimtech.com/blog/contribute/article_images/1220210107030954/public-ip-address-vs-private-ip-address.jpg)
+
+_Image credit: https://www.pragimtech.com/blog/azure/public-ip-address-vs-private-ip-address/_
+
+#### Local IP
+
+aka an **internal** or **private** IP address, is used to identify devices within a local network. They are not publicly accessible from the internet and are only used for communication **within the local network**.
+
+To view your local IP address, run `ipconfig` in the command prompt. [[Example]](https://imgur.com/GPTUq25.png)
+
+#### Public IP
+
+A **globally unique** address assigned to a device connected to the internet. Public IP addresses are obtained from the [Internet Service Provider (ISP)](https://www.investopedia.com/terms/i/isp.asp) and **can be accessed by other devices** and servers on the internet.
+
+To view your public IP address, visit https://myip.wtf _(sorry, this site's language is a bit aggressive)_ [[Example]](https://imgur.com/b2Ow7PC.png)
+
+### DNS
+
+**Domain Name System**. It is a hierarchical and decentralized naming system for computers, services, or other resources connected to the Internet or a private network. Think of it like a phone book for the internet. [[Wiki]](https://en.wikipedia.org/wiki/Domain_Name_System)
+
+![dns comic](https://wizardzines.com/comics/life-of-a-dns-query/life-of-a-dns-query.png)
 
 <!-- ## Chapter 12 - Software Security
 
