@@ -13,7 +13,7 @@
 - [Chapter 6 - Data Structures](#chapter-6---data-structures)
 - [Chapter 7 - Graphical User Interface (GUI)](#chapter-7---graphical-user-interface-gui)
 - [Chapter 8 - Asynchronous Software Engineering](#chapter-8---asynchronous-se)
-- [Chapter 9 - Parallel Computing](#chapter-8---parallel-computing)
+- [Chapter 9 - Parallel Computing](#chapter-9---parallel-computing)
 - [Chapter 10 - Networking & Communication](#chapter-10---networking--communication)
 
 ## Chapter 1 - Introduction
@@ -1655,6 +1655,8 @@ public class Program
 }
 ```
 
+**[⬆ Back to top](#mcte-4327-software-engineering)**
+
 ## Chapter 10 - Networking & Communication
 
 Networking and communication are vital aspects of software engineering, facilitating seamless interaction and enabling the creation of interconnected software solutions.
@@ -1663,13 +1665,13 @@ Networking and communication are vital aspects of software engineering, facilita
 
 A protocol refers to a set of rules and guidelines that govern the exchange of data between devices or systems.
 
-| Protocol                                 | Description                                                                                                                       | Usage                                                                                                                                                   |
-| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **TCP** (Transmission Control Protocol)  | A reliable, connection-oriented protocol that ensures data integrity and sequencing during transmission.                          | Used for applications that require reliable and ordered delivery of data, such as web browsing and file transfer.                                       |
-| **UDP** (User Datagram Protocol)         | A lightweight, connectionless protocol that provides fast, but unreliable data transmission without error checking or sequencing. | Suitable for applications that prioritize speed and can tolerate occasional loss or duplication of data, such as real-time streaming and online gaming. |
-| **HTTP** (Hypertext Transfer Protocol)   | A protocol that enables communication between web browsers and servers, facilitating the retrieval and display of web content.    | Used for accessing and transferring data on the World Wide Web, commonly used for web browsing and APIs.                                                |
-| **FTP** (File Transfer Protocol)         | A standard network protocol used for the transfer of files between a client and a server over a computer network.                 | Commonly employed for uploading and downloading files to and from servers.                                                                              |
-| **SMTP** (Simple Mail Transfer Protocol) | A protocol for sending and receiving email messages between mail servers, enabling reliable email communication.                  | Used for sending and routing email messages over the internet, widely used for email transmission and delivery.                                         |
+| Protocol                                 | Description                                                                                                                       |
+| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **TCP** (Transmission Control Protocol)  | A reliable, connection-oriented protocol that ensures data integrity and sequencing during transmission.                          |
+| **UDP** (User Datagram Protocol)         | A lightweight, connectionless protocol that provides fast, but unreliable data transmission without error checking or sequencing. |
+| **HTTP** (Hypertext Transfer Protocol)   | A protocol that enables communication between web browsers and servers, facilitating the retrieval and display of web content.    |
+| **FTP** (File Transfer Protocol)         | A standard network protocol used for the transfer of files between a client and a server over a computer network.                 |
+| **SMTP** (Simple Mail Transfer Protocol) | A protocol for sending and receiving email messages between mail servers, enabling reliable email communication.                  |
 
 Some more examples: SSH, Telnet, TLS/SSL, IMAP etc.
 
@@ -1702,6 +1704,12 @@ To view your public IP address, visit https://myip.wtf _(sorry, this site's lang
 **Domain Name System**. It is a hierarchical and decentralized naming system for computers, services, or other resources connected to the Internet or a private network. Think of it like a phone book for the internet. [[Wiki]](https://en.wikipedia.org/wiki/Domain_Name_System)
 
 ![dns comic](https://wizardzines.com/comics/life-of-a-dns-query/life-of-a-dns-query.png)
+
+_Image credit: https://wizardzines.com/_
+
+Check out TCP Demo app -> https://github.com/iqfareez/TCP-App
+
+**[⬆ Back to top](#mcte-4327-software-engineering)**
 
 <!-- ## Chapter 12 - Software Security
 
