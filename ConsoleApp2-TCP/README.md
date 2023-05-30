@@ -1,4 +1,12 @@
-﻿# TCPClient & TCPListener demo
+# TCPClient & TCPListener demo
+ 
+## Demo
+
+[ServerClientTCPConsoleDemo.webm](https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/61a38133-abc2-4af6-8bb0-44bea6fa34a3)
+
+## GUI Version
+
+Check out: https://github.com/iqfareez/TCP-App
 
 ## References
 
