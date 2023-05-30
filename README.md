@@ -1675,6 +1675,16 @@ A protocol refers to a set of rules and guidelines that govern the exchange of d
 
 Some more examples: SSH, Telnet, TLS/SSL, IMAP etc.
 
+### TCP
+
+In the [OSI model](https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/), the TCP/IP protocol suite operates at the transport layer. The transport layer is responsible for providing data transfer services between two applications running on different hosts.
+
+In C#, the [TcpClient](https://learn.microsoft.com/en-us/dotnet/api/system.net.sockets.tcpclient?view=net-7.0) and [TcpListener](https://learn.microsoft.com/en-us/dotnet/api/system.net.sockets.tcplistener?view=net-7.0) classes can be used to implement TCP communication between two applications.
+
+Check out **TCP Demo** -> [GUI](https://github.com/iqfareez/TCP-App) or [Console](https://github.com/iqfareez/MCTE-4327-Software-Engineering/tree/main/ConsoleApp2-TCP)
+
+![TCP App screenshot](https://imgur.com/2FdlNYN.png)
+
 ### URI
 
 **Uniform Resource Identifier**. It is a string of characters used to identify and locate resources on the internet. Example of URI schemes: `irc://`, `mailto://`, `ftp://`, `http://`, `https://`, `file://`, `data://` etc.
@@ -1706,8 +1716,6 @@ To view your public IP address, visit https://myip.wtf _(sorry, this site's lang
 ![dns comic](https://wizardzines.com/comics/life-of-a-dns-query/life-of-a-dns-query.png)
 
 _Image credit: https://wizardzines.com/_
-
-Check out TCP Demo app -> https://github.com/iqfareez/TCP-App
 
 **[⬆ Back to top](#mcte-4327-software-engineering)**
 
