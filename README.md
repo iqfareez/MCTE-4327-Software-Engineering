@@ -1060,7 +1060,7 @@ Counter counter = new Counter();
 // Subscribe to the CountReached event of the Counter instance
 counter.CountReached += (a, e) => Console.WriteLine("Count reached");
 
-// Start counting from 1 to 10
+// Start counting from 1 to 5
 counter.CountTo(5);
 ```
 
@@ -1134,7 +1134,7 @@ Console.WriteLine(arr1 == arr2); // False
 
 ##### Finding one item
 
-Searches for an element that matches the conditions defined by the specified predicate, and returns the first occurrence within the entire Array. [[Docs]](https://learn.microsoft.com/en-us/dotnet/api/system.array.find?view=net-7.0)
+Searches for an element that matches the conditions defined by the specified predicate, and returns the **first occurrence** within the entire Array. [[Docs]](https://learn.microsoft.com/en-us/dotnet/api/system.array.find?view=net-7.0)
 
 ```csharp
 using System;
@@ -1146,7 +1146,7 @@ var match = Array.Find(cats, s => s.StartsWith("C"));
 
 ##### Finding multiple items
 
-Retrieves all the elements that match the conditions defined by the specified predicate. [[Docs]](https://learn.microsoft.com/en-us/dotnet/api/system.array.findall?view=net-7.0)
+Retrieves **all the elements** that match the conditions defined by the specified predicate. [[Docs]](https://learn.microsoft.com/en-us/dotnet/api/system.array.findall?view=net-7.0)
 
 ```csharp
 using System;
