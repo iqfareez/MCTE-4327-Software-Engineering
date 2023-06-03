@@ -1713,7 +1713,7 @@ To view your public IP address, visit https://myip.wtf _(sorry, this site's lang
 
 **Domain Name System**. It is a hierarchical and decentralized naming system for computers, services, or other resources connected to the Internet or a private network. Think of it like a phone book for the internet. [[Wiki]](https://en.wikipedia.org/wiki/Domain_Name_System)
 
-![dns comic](https://wizardzines.com/comics/life-of-a-dns-query/life-of-a-dns-query.png)
+![dns comic](https://imgur.com/Pb3vpdB.png)
 
 _Image credit: https://wizardzines.com/_
 
