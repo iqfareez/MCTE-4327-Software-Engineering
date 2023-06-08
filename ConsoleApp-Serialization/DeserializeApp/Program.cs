@@ -15,7 +15,8 @@ namespace DeserializeApp
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Select formatter (x = XML, b = Binary): " );
+            var desktopDir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            Console.WriteLine("Select formatter (x = XML, b = Binary, j = JSON): " );
             var chosenFormatter = Console.ReadLine();
 
             switch (chosenFormatter?.ToLower())
@@ -23,8 +24,7 @@ namespace DeserializeApp
                 case "x":
                     // Deserialize from XML
                     var xml = new System.Xml.Serialization.XmlSerializer(typeof(Student));
-                    var desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                    var file = Path.Combine(desktop, "student.xml");
+                    var file = Path.Combine(desktopDir, "student.xml");
                     FileStream fs = new FileStream(file, FileMode.Open, FileAccess.Read);
                     var maple = (Student) xml.Deserialize(fs);
                     fs.Close();
@@ -37,13 +37,21 @@ namespace DeserializeApp
                     // Serialize to Binary
                     // Currently, this method wont works, maybe because im using different namespace
                     BinaryFormatter bf = new BinaryFormatter();
-                    var desktop1 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                    var file1 = Path.Combine(desktop1, "student.data");
+                    var file1 = Path.Combine(desktopDir, "student.data");
                     FileStream fs1 = new FileStream(file1, FileMode.Open, FileAccess.Read);
                     var maple2 = (Student) bf.Deserialize(fs1);
                     
                     Console.WriteLine("Done serializing to Binary");
                     Console.WriteLine(maple2.Name);
+                    break;
+                case "j":
+                    // Deserialize from JSON
+                    var file2 = Path.Combine(desktopDir, "student.json");
+                    var json = File.ReadAllText(file2);
+                    var maple3 = Newtonsoft.Json.JsonConvert.DeserializeObject<Student>(json);
+                    
+                    Console.WriteLine("Done deserializing from JSON");
+                    Console.WriteLine(maple3.Name);
                     break;
                 default:
                     Console.WriteLine("Invalid formatter");

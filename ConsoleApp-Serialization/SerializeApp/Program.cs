@@ -15,9 +15,10 @@ namespace SerializeApp
     {
         public static void Main(string[] args)
         {
+            var desktopDir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             var maple = new Student() { Kulliyyah = "KOE", Name = "Fareez" };
 
-            Console.WriteLine("Select formatter (x = XML, b = Binary: " );
+            Console.WriteLine("Select formatter (x = XML, b = Binary, j = JSON): " );
             var chosenFormatter = Console.ReadLine();
 
             switch (chosenFormatter?.ToLower())
@@ -25,25 +26,31 @@ namespace SerializeApp
                 case "x":
                     // Serialize to XML
                     var xml = new System.Xml.Serialization.XmlSerializer(typeof(Student));
-                    var desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                    var file = Path.Combine(desktop, "student.xml");
+                    var file = Path.Combine(desktopDir, "student.xml");
                     FileStream fs = new FileStream(file, FileMode.Create);
                     xml.Serialize(fs, maple);
                     fs.Close();
 
-                    Console.WriteLine("Done serializing to XML");
+                    Console.WriteLine("Done serializing to XML. File saved to " + file);
 
                     break;
                 case "b":
                     // Serialize to Binary
                     BinaryFormatter bf = new BinaryFormatter();
-                    var desktop1 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                    var file1 = Path.Combine(desktop1, "student.data");
+                    var file1 = Path.Combine(desktopDir, "student.data");
                     FileStream fs1 = new FileStream(file1, FileMode.Create);
                     bf.Serialize(fs1, maple);
                     fs1.Close();
                     
-                    Console.WriteLine("Done serializing to Binary");
+                    Console.WriteLine("Done serializing to Binary. File saved to " + file1);
+                    break;
+                case "j":
+                    // Serialize to JSON
+                    var file2 = Path.Combine(desktopDir, "student.json");
+                    var json = Newtonsoft.Json.JsonConvert.SerializeObject(maple);
+                    File.WriteAllText(file2, json);
+                    
+                    Console.WriteLine("Done serializing to JSON. File saved to " + file2);
                     break;
                 default:
                     Console.WriteLine("Invalid formatter");
