@@ -1347,8 +1347,6 @@ ID 143 belongs to: Alice
 
 ## Chapter 7 - Graphical User Interface (GUI)
 
-![gui meme](https://i.redd.it/f9kp06jawsu41.jpg)
-
 ~ is a type of interface that allows users to interact with digital devices using **visual elements** such as icons, menus, and buttons, rather than text-based commands.
 
 ### Windows Forms
@@ -1727,7 +1725,7 @@ _Image credit: https://wizardzines.com/_
   <img alt="Localhost diagram" src="https://imgur.com/L0AOnhd.png">
 </picture>
 
-Serialization in programming refers to the process of **converting** complex data structures or objects into a **format that can be stored or transmitted**, and later reconstructed back into its original form. It allows data to be persisted in a file or transferred across different systems or platforms.
+~ refers to the process of **converting** complex data structures or objects into a **format that can be stored or transmitted**, and later reconstructed back into its original form. It allows data to be persisted in a file or transferred across different systems or platforms.
 
 ### Type of Serialization
 
