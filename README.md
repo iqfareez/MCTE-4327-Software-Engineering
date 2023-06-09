@@ -15,6 +15,7 @@
 - [Chapter 8 - Asynchronous Software Engineering](#chapter-8---asynchronous-se)
 - [Chapter 9 - Parallel Computing](#chapter-9---parallel-computing)
 - [Chapter 10 - Networking & Communication](#chapter-10---networking--communication)
+- [Chapter 11 - Serilization](#)
 
 ## Chapter 1 - Introduction
 
@@ -1716,6 +1717,35 @@ To view your public IP address, visit https://myip.wtf _(sorry, this site's lang
 ![dns comic](https://imgur.com/Pb3vpdB.png)
 
 _Image credit: https://wizardzines.com/_
+
+**[⬆ Back to top](#mcte-4327-software-engineering)**
+
+## Chapter 11 - Serilization
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://imgur.com/VWm5awd.png">
+  <img alt="Localhost diagram" src="https://imgur.com/L0AOnhd.png">
+</picture>
+
+Serialization in programming refers to the process of **converting** complex data structures or objects into a **format that can be stored or transmitted**, and later reconstructed back into its original form. It allows data to be persisted in a file or transferred across different systems or platforms.
+
+### Type of Serialization
+
+- **Binary:** Data is converted into a binary format, which is more compact and efficient for storage and transmission. Binary serialization is often used when performance is a concern, such as in high-performance computing or network communication.
+
+  In C#, `BinaryFormatter` from `System.Runtime.Serialization.Formatters.Binary` can be used to serialize and deserialize objects to and from binary format. Example code can be found [here](https://github.com/iqfareez/MCTE-4327-Software-Engineering/blob/c6bfc4d80b98a9c87cfeacd2cb86cb67854e2ea1/ConsoleApp-Serialization/SerializeApp/Program.cs#LL39C46-L39C61).
+
+  But, I must warn you, **don't use binary serilization**. They have many limitations, such as you cannot deserialize a file that have been serialized from another project/assembly.
+
+  > `BinaryFormatter` is very brittle - and while you can often bang your head on the keyboard for 6 hours to get past each successive pain point, it really isn't worth it. [[A wise guy from SO]](https://stackoverflow.com/a/26205642/13617136)
+
+- **JSON (JavaScript Object Notation):** A popular lightweight data interchange format that represents data as human-readable text. JSON serialization is widely used in web development and [API](https://www.redhat.com/en/topics/api/what-is-a-rest-api)s for transmitting data between different systems or platforms.
+
+  In C#, you can use third party packages such as [JSON.NET](https://www.newtonsoft.com/json) to serialize and deserialize JSON files. Example code can be found [here](https://github.com/iqfareez/MCTE-4327-Software-Engineering/blob/27d863032c8f2a632ea70a02baf92923ec1be27e/ConsoleApp-Serialization/SerializeApp/Program.cs#L50).
+
+- **XML (eXtensible Markup Language):** A markup language that defines a set of rules for encoding documents. XML serialization is commonly used for storing and exchanging structured data, especially when compatibility and extensibility are important.
+
+  In C#, you can use `XmlSerializer` from `System.Xml.Serialization` namespace to serialize and deserialize XML files. For example code, see [here](https://github.com/iqfareez/MCTE-4327-Software-Engineering/blob/c6bfc4d80b98a9c87cfeacd2cb86cb67854e2ea1/ConsoleApp-Serialization/SerializeApp/Program.cs#L26)
 
 **[⬆ Back to top](#mcte-4327-software-engineering)**
 
