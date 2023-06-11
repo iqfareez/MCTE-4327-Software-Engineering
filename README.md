@@ -15,7 +15,7 @@
 - [Chapter 8 - Asynchronous Software Engineering](#chapter-8---asynchronous-se)
 - [Chapter 9 - Parallel Computing](#chapter-9---parallel-computing)
 - [Chapter 10 - Networking & Communication](#chapter-10---networking--communication)
-- [Chapter 11 - Serilization](#)
+- [Chapter 11 - Serialization](#chapter-11---serialization)
 
 ## Chapter 1 - Introduction
 
@@ -1718,7 +1718,7 @@ _Image credit: https://wizardzines.com/_
 
 **[⬆ Back to top](#mcte-4327-software-engineering)**
 
-## Chapter 11 - Serilization
+## Chapter 11 - Serialization
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://imgur.com/VWm5awd.png">
@@ -1744,6 +1744,12 @@ _Image credit: https://wizardzines.com/_
 - **XML (eXtensible Markup Language):** A markup language that defines a set of rules for encoding documents. XML serialization is commonly used for storing and exchanging structured data, especially when compatibility and extensibility are important.
 
   In C#, you can use `XmlSerializer` from `System.Xml.Serialization` namespace to serialize and deserialize XML files. For example code, see [here](https://github.com/iqfareez/MCTE-4327-Software-Engineering/blob/c6bfc4d80b98a9c87cfeacd2cb86cb67854e2ea1/ConsoleApp-Serialization/SerializeApp/Program.cs#L26)
+
+### Serial Port
+
+A **serial port** is a physical interface through which information transfers in or out one bit at a time. It is used to connect devices such as modems, printers, mice, and keyboards to a computer. [[Wiki]](https://en.wikipedia.org/wiki/Serial_port)
+
+We can transfer data between PC and to Arduino using Serial Port. C# .NET has built in support for serial port communication. Check out my project [**Serilink**](https://github.com/iqfareez/SeriLink) - _An Arduino Serial Monitor clone built with Winforms C# .NET._
 
 **[⬆ Back to top](#mcte-4327-software-engineering)**
 
