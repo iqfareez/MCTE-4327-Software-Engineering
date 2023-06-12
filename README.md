@@ -1755,6 +1755,75 @@ We can transfer data between PC and to Arduino using Serial Port. C# .NET has bu
 
 **[⬆ Back to top](#mcte-4327-software-engineering)**
 
-<!-- ## Chapter 12 - Software Security
+## Chapter 12 - Software Security
 
-![xkcd security](https://imgs.xkcd.com/comics/security.png) -->
+![xkcd security](https://imgs.xkcd.com/comics/security.png)
+
+Important security factors TODO: Buat diagram
+- Availability
+- Confidentiality
+- Integrity
+- Authenticity
+
+### Security attacks
+
+#### Passive attacks
+
+Example: Network sniffing,
+
+#### Active attacks
+
+Example: Masquerade, [denial-of-service](https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack/) (DDoS), [Man-in-the-Middle](https://www.fortinet.com/resources/cyberglossary/man-in-the-middle-attack) (MITM), Modification
+
+DDos attack traphic metaphor (Credit: [Cloudflare](https://www.cloudflare.com/)):
+![ddos cloudflare](https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/11521462-5ace-41fe-9de2-96463d39ad44)
+
+#### Mapping attacks to security factors
+
+- **Interruption**: attack on **Availability**
+- **Interception**: attack on **Confidentiality**
+- **Modification**: attack on **Integrity**
+- **Fabrication**: attack on **Authenticity**
+
+
+### Encryption
+
+Plaintext --> encryption algorithm --> ciphertext
+
+#### Symmetric encryption
+
+Encryption using same secret key
+
+
+Requirements
+- A strong encryption algorithm
+- A secret key only sender & receiver knows.
+
+#### Asymmetric encryption
+
+Encryption using public and private key
+
+Example: When connecting to cloud VM, you'll need to SSH to that machine using the private key generated. Read more on: https://iqfareez.com/blog/deploy-nodered-flows-to-the-cloud-azure#accessing-your-vms-shell
+
+### Cryptography
+
+#### Caesar Cipher
+
+Try Caesar Cipher: https://cryptii.com/pipes/caesar-cipher
+Bruteforce decryption: https://www.boxentriq.com/code-breaking/caesar-cipher
+
+Monoalphabetic ciphers
+
+TODO: Cerita pasal alkindi
+
+### Data Encryption Standard (DES)
+
+- Obsolete and highly insecure
+
+### Advanced Encryption Standard (AES)
+
+
+
+Learn more:
+- [Geeks for Geeks - Active and Passive attacks in Information Security](https://www.geeksforgeeks.org/active-and-passive-attacks-in-information-security/)
+- [YouTube - ]
