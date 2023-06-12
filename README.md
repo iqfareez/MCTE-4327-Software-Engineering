@@ -1759,19 +1759,33 @@ We can transfer data between PC and to Arduino using Serial Port. C# .NET has bu
 
 ![xkcd security](https://imgs.xkcd.com/comics/security.png)
 
-Important security factors TODO: Buat diagram
-- Availability
-- Confidentiality
-- Integrity
-- Authenticity
+~ **protects** applications and systems from unauthorized access and malicious attacks. It involves identifying vulnerabilities, preventing breaches, and mitigating risks. By implementing robust security measures, organizations safeguard sensitive information, maintain system integrity, and ensure software availability.
+
+### Important security factors
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/c92fd8b6-e43c-4195-843b-dcfc1583ac51">
+  <img alt="Localhost diagram" src="https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/0819d130-998e-4ddb-b4e7-b5104b780a1c">
+</picture>
+
+| Security Factor | Description                                                                                                     |
+| --------------- | --------------------------------------------------------------------------------------------------------------- |
+| Confidentiality | Protects sensitive information from unauthorized access or disclosure.                                          |
+| Integrity       | Ensures the accuracy and reliability of data and systems, preventing unauthorized modifications.                |
+| Availability    | Ensures systems, networks, and services are accessible and operational when needed, minimizing downtime.        |
+| Authentication  | Verifies the identity of users or entities accessing a system, while authorization determines their privileges. |
 
 ### Security attacks
 
 #### Passive attacks
 
+Passive attacks aim to gather information without altering the target system or data. These attacks are often difficult to detect since they do not disrupt or modify the system.
+
 Example: Network sniffing,
 
 #### Active attacks
+
+Active attacks involve actions that modify or disrupt the target system, data, or network. These attacks are more noticeable and can cause immediate harm or damage.
 
 Example: Masquerade, [denial-of-service](https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack/) (DDoS), [Man-in-the-Middle](https://www.fortinet.com/resources/cyberglossary/man-in-the-middle-attack) (MITM), Modification
 
@@ -1785,8 +1799,9 @@ DDos attack traphic metaphor (Credit: [Cloudflare](https://www.cloudflare.com/))
 - **Modification**: attack on **Integrity**
 - **Fabrication**: attack on **Authenticity**
 
-
 ### Encryption
+
+~ is a process of converting plain or readable data, often referred to as **plaintext**, into an unintelligible form known as **ciphertext**. It is a fundamental technique used to protect sensitive information from unauthorized access or interception during storage or transmission. The encryption process involves using an **encryption algorithm** and a secret key to scramble the plaintext, making it unreadable to anyone who does not possess the corresponding decryption key.
 
 Plaintext --> encryption algorithm --> ciphertext
 
@@ -1794,8 +1809,8 @@ Plaintext --> encryption algorithm --> ciphertext
 
 Encryption using same secret key
 
-
 Requirements
+
 - A strong encryption algorithm
 - A secret key only sender & receiver knows.
 
@@ -1814,7 +1829,23 @@ Bruteforce decryption: https://www.boxentriq.com/code-breaking/caesar-cipher
 
 Monoalphabetic ciphers
 
-TODO: Cerita pasal alkindi
+TODO: Cerita pasal alkindi (frequency analysis)
+
+<p align="left">
+  <img alt="Alkindi" src="https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/402cd92d-fabc-4b7c-aa3c-d13371b7942e" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="Al-kindi-cryptanalysis" src="https://upload.wikimedia.org/wikipedia/commons/6/65/Al-kindi-cryptanalysis.png?20050420113418" width="45%">
+</p>
+
+From _"Risalah fi Istikhraj al-Mu'amma"_ (Treatise on Deciphering Cryptographic Messages), authored by Al-Kindi (Abu Yusuf Ya'qub ibn Ishaq al-Kindi) in 9th century, he mentioned about deciphering encrypted messages using frequency analysis [[Source]](https://muslimheritage.com/al-kindi-cryptography):
+
+> One way to solve an encrypted message, if we know its language, is to find a different plaintext of the same language long enough to fill one sheet or so, and then we count the occurrences of each letter. We call the most frequently occurring letter the ‘first’, the next most occurring letter the ‘second’, the following most occurring the ‘third’, and so on, until we account for all the different letters in the plaintext sample
+
+> Then we look at the cipher text we want to solve and we also classify its symbols. We find the most occurring symbol and change it to the form of the ‘first’ letter of the plaintext sample, the next most common symbol is changed to the form of the ‘second’ letter, and so on, until we account for all symbols of the cryptogram we want to solve.
+
+Al-Kindi recognized that certain letters or symbols in a language occur more frequently than others. By analyzing the **frequency distribution** of these characters in a ciphertext, he developed techniques to identify patterns and make educated guesses about the underlying plaintext.
+
+![Reproduction of al-Kindi's letter frequency table](https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/336fdc15-665d-41ca-b9de-aba84e25267d)
 
 ### Data Encryption Standard (DES)
 
@@ -1822,8 +1853,7 @@ TODO: Cerita pasal alkindi
 
 ### Advanced Encryption Standard (AES)
 
-
-
 Learn more:
+
 - [Geeks for Geeks - Active and Passive attacks in Information Security](https://www.geeksforgeeks.org/active-and-passive-attacks-in-information-security/)
 - [YouTube - ]
