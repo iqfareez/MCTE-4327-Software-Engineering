@@ -1847,11 +1847,42 @@ Al-Kindi recognized that certain letters or symbols in a language occur more fre
 
 ![Reproduction of al-Kindi's letter frequency table](https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/336fdc15-665d-41ca-b9de-aba84e25267d)
 
+### Avalanche Effect
+
+A **slight change** in either the key or the plain-text should result in a **significant change in the cipher-text**. It is  considered as one of the desirable property of any encryption algorithm.
+
 ### Data Encryption Standard (DES)
 
 - Obsolete and highly insecure
 
+### Triple DES Encryption
+
+aka 3DES or TDES
+
+~ applies DES algorithm three times to each data block using three different keys
+
+But it three times slower.
+
 ### Advanced Encryption Standard (AES)
+
+~ specifes a FIPS-approved cryptographic algorithm that can be used to protect electronic data. The algorithm is a symmetric block cipher that can encrypt (encipher) and decrypt (decipher) digital information. 
+
+The AES algorithm is capable of using cryptographic keys of 128, 192, and 256 bits to encrypt 
+and decrypt data in blocks of 128 bits.
+
+Read the publication: https://doi.org/10.6028/NIST.FIPS.197-upd1
+
+
+### Non-symmetric Encryption
+
+#### RSA
+
+**R**ivest–**S**hamir–**A**dleman. 
+
+### Hashing
+
+~ is one way function.
+
 
 Learn more:
 
