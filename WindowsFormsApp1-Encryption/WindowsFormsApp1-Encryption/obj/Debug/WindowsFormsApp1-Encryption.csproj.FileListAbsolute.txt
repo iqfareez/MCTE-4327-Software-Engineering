@@ -1,0 +1,10 @@
+C:\Users\Registration\Desktop\WindowsFormsApp1-Encryption\WindowsFormsApp1-Encryption\bin\Debug\WindowsFormsApp1-Encryption.exe.config
+C:\Users\Registration\Desktop\WindowsFormsApp1-Encryption\WindowsFormsApp1-Encryption\bin\Debug\WindowsFormsApp1-Encryption.exe
+C:\Users\Registration\Desktop\WindowsFormsApp1-Encryption\WindowsFormsApp1-Encryption\bin\Debug\WindowsFormsApp1-Encryption.pdb
+C:\Users\Registration\Desktop\WindowsFormsApp1-Encryption\WindowsFormsApp1-Encryption\obj\Debug\WindowsFormsApp1-Encryption.csproj.AssemblyReference.cache
+C:\Users\Registration\Desktop\WindowsFormsApp1-Encryption\WindowsFormsApp1-Encryption\obj\Debug\WindowsFormsApp1_Encryption.Form1.resources
+C:\Users\Registration\Desktop\WindowsFormsApp1-Encryption\WindowsFormsApp1-Encryption\obj\Debug\WindowsFormsApp1_Encryption.Properties.Resources.resources
+C:\Users\Registration\Desktop\WindowsFormsApp1-Encryption\WindowsFormsApp1-Encryption\obj\Debug\WindowsFormsApp1-Encryption.csproj.GenerateResource.cache
+C:\Users\Registration\Desktop\WindowsFormsApp1-Encryption\WindowsFormsApp1-Encryption\obj\Debug\WindowsFormsApp1-Encryption.csproj.CoreCompileInputs.cache
+C:\Users\Registration\Desktop\WindowsFormsApp1-Encryption\WindowsFormsApp1-Encryption\obj\Debug\WindowsFormsApp1-Encryption.exe
+C:\Users\Registration\Desktop\WindowsFormsApp1-Encryption\WindowsFormsApp1-Encryption\obj\Debug\WindowsFormsApp1-Encryption.pdb
