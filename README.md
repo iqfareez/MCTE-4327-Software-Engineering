@@ -1824,13 +1824,6 @@ Example: When connecting to cloud VM, you'll need to SSH to that machine using t
 
 #### Caesar Cipher
 
-Try Caesar Cipher: https://cryptii.com/pipes/caesar-cipher
-Bruteforce decryption: https://www.boxentriq.com/code-breaking/caesar-cipher
-
-Monoalphabetic ciphers
-
-TODO: Cerita pasal alkindi (frequency analysis)
-
 <p align="left">
   <img alt="Alkindi" src="https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/402cd92d-fabc-4b7c-aa3c-d13371b7942e" width="45%">
 &nbsp; &nbsp; &nbsp; &nbsp;
@@ -1847,6 +1840,11 @@ Al-Kindi recognized that certain letters or symbols in a language occur more fre
 
 ![Reproduction of al-Kindi's letter frequency table](https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/336fdc15-665d-41ca-b9de-aba84e25267d)
 
+#### Try Caesar Cipher yourself
+
+- https://cryptii.com/pipes/caesar-cipher
+- Bruteforce decryption: https://www.boxentriq.com/code-breaking/caesar-cipher
+
 ### Avalanche Effect
 
 A **slight change** in either the key or the plain-text should result in a **significant change in the cipher-text**. It is considered as one of the desirable property of any encryption algorithm.
@@ -1860,6 +1858,10 @@ A **slight change** in either the key or the plain-text should result in a **sig
 aka 3DES or TDES
 
 ~ applies DES algorithm three times to each data block using three different keys
+
+![triple DES](https://community.cisco.com/legacyfs/online/legacy/9/6/8/112869-des3p1.gif)
+
+_Image credit: [Cisco](https://community.cisco.com/t5/security-knowledge-base/3des/ta-p/3113951)_
 
 But it three times slower.
 
@@ -1882,7 +1884,26 @@ Named after its inventors, **R**ivest–**S**hamir–**A**dleman.
 
 ### Hashing
 
-~ is one way function.
+~ refers to the process of taking an input (or key) and applying a mathematical function called a hash function to produce a fixed-size output.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/9af95c8b-7a64-4f66-8501-13605c744427">
+  <img alt="Hashing diagram" src="https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/c789caa6-306d-4c59-ab39-e3402a3b3c0f">
+</picture>
+
+Hashing is **one way function** - once you hash, you cannot de-hash.
+
+#### Application of hashing
+
+- Data Retrieval: Hash functions are used to map keys to indexes in an array, allowing efficient storage and retrieval of data.
+
+- Password Storage: Rather than storing actual passwords, systems typically store the hash values of passwords. When a user enters their password, it is hashed and compared to the stored hash value.
+
+- Digital Signatures: Provides a way to verify the integrity and authenticity of digital messages or documents.
+
+- Data Integrity: Hashing can be used to ensure data integrity during transmission or storage. By calculating the hash value of a file or message before and after transmission, one can verify if the data has been modified during transit or if any errors have occurred. This technique is commonly used in checksum algorithms and integrity checking mechanisms.
+
+- Cryptographic Hash Functions: Specifically designed to have properties like collision resistance and preimage resistance. Collision resistance means that it is computationally infeasible to find two different inputs that produce the same hash value.
 
 Learn more:
 
