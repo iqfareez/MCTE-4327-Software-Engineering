@@ -1849,7 +1849,7 @@ Al-Kindi recognized that certain letters or symbols in a language occur more fre
 
 ### Avalanche Effect
 
-A **slight change** in either the key or the plain-text should result in a **significant change in the cipher-text**. It is  considered as one of the desirable property of any encryption algorithm.
+A **slight change** in either the key or the plain-text should result in a **significant change in the cipher-text**. It is considered as one of the desirable property of any encryption algorithm.
 
 ### Data Encryption Standard (DES)
 
@@ -1865,24 +1865,24 @@ But it three times slower.
 
 ### Advanced Encryption Standard (AES)
 
-~ specifes a FIPS-approved cryptographic algorithm that can be used to protect electronic data. The algorithm is a symmetric block cipher that can encrypt (encipher) and decrypt (decipher) digital information. 
+~ specifes a FIPS-approved cryptographic algorithm that can be used to protect electronic data. The algorithm is a symmetric block cipher that can encrypt (encipher) and decrypt (decipher) digital information.
 
-The AES algorithm is capable of using cryptographic keys of 128, 192, and 256 bits to encrypt 
+The AES algorithm is capable of using cryptographic keys of 128, 192, and 256 bits to encrypt
 and decrypt data in blocks of 128 bits.
 
 Read the publication: https://doi.org/10.6028/NIST.FIPS.197-upd1
-
 
 ### Non-symmetric Encryption
 
 #### RSA
 
-**R**ivest–**S**hamir–**A**dleman. 
+Named after its inventors, **R**ivest–**S**hamir–**A**dleman.
+
+~ relies on a public key and a private key. The keys are mathematically related, but it is computationally infeasible to derive the private key from the public key.
 
 ### Hashing
 
 ~ is one way function.
-
 
 Learn more:
 
