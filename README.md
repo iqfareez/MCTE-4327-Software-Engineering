@@ -977,6 +977,8 @@ Console.WriteLine(ans); // 9
 
 > **Note** - The `=>` operator is called the **lambda operator**. It is used to define an anonymous method. [[Docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-operator)]
 
+> An interesting and useful property of delegate is that it does not know or care about the class of the methods it references; **all that matters is that the referenced method has the same parameters and return type** as the delegate. - [_The C# Programming Language_](https://www.amazon.com/Programming-Language-2nd-Anders-Hejlsberg/dp/0321334434)
+
 ### Built-in delegates
 
 A built-in delegate is a pre-defined delegate type that is provided by the .NET Framework.
