@@ -16,6 +16,7 @@
 - [Chapter 9 - Parallel Computing](#chapter-9---parallel-computing)
 - [Chapter 10 - Networking & Communication](#chapter-10---networking--communication)
 - [Chapter 11 - Serialization](#chapter-11---serialization)
+- [Chapter 12 - Software Security](#chapter-12---software-security)
 
 ## Chapter 1 - Introduction
 
@@ -1874,7 +1875,7 @@ _Another example:_ When connecting to cloud VM, you'll need to SSH to that machi
 
 ### RSA
 
-![RSA](https://cdn.mindmajix.com/blog/images/what-is-rsa-algorithm_2_3-4-23.png)
+![RSA](https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/c5a05290-24f1-4698-ae2d-65b1d590a700)
 
 _Image credit: [MindMajix](https://mindmajix.com/what-is-rsa-algorithm)_
 
@@ -1896,16 +1897,14 @@ Hashing is **one way function** - once you hash, you cannot de-hash.
 #### Application of hashing
 
 - Data Retrieval: Hash functions are used to map keys to indexes in an array, allowing efficient storage and retrieval of data.
-
 - Password Storage: Rather than storing actual passwords, systems typically store the hash values of passwords. When a user enters their password, it is hashed and compared to the stored hash value.
-
 - Digital Signatures: Provides a way to verify the integrity and authenticity of digital messages or documents.
-
 - Data Integrity: Hashing can be used to ensure data integrity during transmission or storage. By calculating the hash value of a file or message before and after transmission, one can verify if the data has been modified during transit or if any errors have occurred. This technique is commonly used in checksum algorithms and integrity checking mechanisms.
-
 - Cryptographic Hash Functions: Specifically designed to have properties like collision resistance and preimage resistance. Collision resistance means that it is computationally infeasible to find two different inputs that produce the same hash value.
 
 Learn more:
 
 - [Geeks for Geeks - Active and Passive attacks in Information Security](https://www.geeksforgeeks.org/active-and-passive-attacks-in-information-security/)
 - [YouTube - 7 Cryptography Concepts EVERY Developer Should Know](https://youtu.be/NuyzuNBFWxQ)
+
+**[⬆ Back to top](#mcte-4327-software-engineering)**
