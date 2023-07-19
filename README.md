@@ -1755,6 +1755,157 @@ We can transfer data between PC and to Arduino using Serial Port. C# .NET has bu
 
 **[⬆ Back to top](#mcte-4327-software-engineering)**
 
-<!-- ## Chapter 12 - Software Security
+## Chapter 12 - Software Security
 
-![xkcd security](https://imgs.xkcd.com/comics/security.png) -->
+![xkcd security](https://imgs.xkcd.com/comics/security.png)
+
+~ **protects** applications and systems from unauthorized access and malicious attacks. It involves identifying vulnerabilities, preventing breaches, and mitigating risks. By implementing robust security measures, organizations safeguard sensitive information, maintain system integrity, and ensure software availability.
+
+### Important security factors
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/c92fd8b6-e43c-4195-843b-dcfc1583ac51">
+  <img alt="Localhost diagram" src="https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/0819d130-998e-4ddb-b4e7-b5104b780a1c">
+</picture>
+
+| Security Factor | Description                                                                                                     |
+| --------------- | --------------------------------------------------------------------------------------------------------------- |
+| Confidentiality | Protects sensitive information from unauthorized access or disclosure.                                          |
+| Integrity       | Ensures the accuracy and reliability of data and systems, preventing unauthorized modifications.                |
+| Availability    | Ensures systems, networks, and services are accessible and operational when needed, minimizing downtime.        |
+| Authentication  | Verifies the identity of users or entities accessing a system, while authorization determines their privileges. |
+
+### Security attacks
+
+#### Passive attacks
+
+Passive attacks aim to gather information without altering the target system or data. These attacks are often difficult to detect since they do not disrupt or modify the system.
+
+Example: Network sniffing,
+
+#### Active attacks
+
+Active attacks involve actions that modify or disrupt the target system, data, or network. These attacks are more noticeable and can cause immediate harm or damage.
+
+Example: Masquerade, [denial-of-service](https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack/) (DDoS), [Man-in-the-Middle](https://www.fortinet.com/resources/cyberglossary/man-in-the-middle-attack) (MITM), Modification
+
+DDos attack traphic metaphor (Credit: [Cloudflare](https://www.cloudflare.com/)):
+![ddos cloudflare](https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/11521462-5ace-41fe-9de2-96463d39ad44)
+
+#### Mapping attacks to security factors
+
+- **Interruption**: attack on **Availability**
+- **Interception**: attack on **Confidentiality**
+- **Modification**: attack on **Integrity**
+- **Fabrication**: attack on **Authenticity**
+
+### Cryptography
+
+#### Caesar Cipher
+
+<p align="left">
+  <img alt="Alkindi" src="https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/402cd92d-fabc-4b7c-aa3c-d13371b7942e" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="Al-kindi-cryptanalysis" src="https://upload.wikimedia.org/wikipedia/commons/6/65/Al-kindi-cryptanalysis.png?20050420113418" width="45%">
+</p>
+
+From _"Risalah fi Istikhraj al-Mu'amma"_ (Treatise on Deciphering Cryptographic Messages), authored by Al-Kindi (Abu Yusuf Ya'qub ibn Ishaq al-Kindi) in 9th century, he mentioned about deciphering encrypted messages using frequency analysis [[Source]](https://muslimheritage.com/al-kindi-cryptography):
+
+> One way to solve an encrypted message, if we know its language, is to find a different plaintext of the same language long enough to fill one sheet or so, and then we count the occurrences of each letter. We call the most frequently occurring letter the ‘first’, the next most occurring letter the ‘second’, the following most occurring the ‘third’, and so on, until we account for all the different letters in the plaintext sample
+
+> Then we look at the cipher text we want to solve and we also classify its symbols. We find the most occurring symbol and change it to the form of the ‘first’ letter of the plaintext sample, the next most common symbol is changed to the form of the ‘second’ letter, and so on, until we account for all symbols of the cryptogram we want to solve.
+
+Al-Kindi recognized that certain letters or symbols in a language occur more frequently than others. By analyzing the **frequency distribution** of these characters in a ciphertext, he developed techniques to identify patterns and make educated guesses about the underlying plaintext.
+
+![Reproduction of al-Kindi's letter frequency table](https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/336fdc15-665d-41ca-b9de-aba84e25267d)
+
+#### Try Caesar Cipher yourself
+
+- https://cryptii.com/pipes/caesar-cipher
+- Bruteforce decryption: https://www.boxentriq.com/code-breaking/caesar-cipher
+
+### Avalanche Effect
+
+A **slight change** in either the key or the plain-text should result in a **significant change in the cipher-text**. It is considered as one of the desirable property of any encryption algorithm.
+
+### Encryption
+
+~ is a process of converting plain or readable data, often referred to as **plaintext**, into an unintelligible form known as **ciphertext**. It is a fundamental technique used to protect sensitive information from unauthorized access or interception during storage or transmission. The encryption process involves using an **encryption algorithm** and a secret key to scramble the plaintext, making it unreadable to anyone who does not possess the corresponding decryption key.
+
+```mermaid
+flowchart LR
+    A[Plaintext] --> B[Encryption Algorithm]
+    B --> C[Ciphertext]
+```
+
+#### Symmetric encryption - Triple DES Encryption
+
+Encryption using same secret key
+
+Requirements
+
+- A strong encryption algorithm
+- A secret key only sender & receiver knows.
+
+**Triple DES Encryption** (aka 3DES or TDES) applies DES algorithm three times to each data block using three different keys
+
+![triple DES](https://community.cisco.com/legacyfs/online/legacy/9/6/8/112869-des3p1.gif)
+
+_Image credit: [Cisco](https://community.cisco.com/t5/security-knowledge-base/3des/ta-p/3113951)_
+
+But it three times slower.
+
+#### Asymmetric encryption - Advanced Encryption Standard (AES)
+
+Encryption using public and private key
+
+![aes diagram](https://assets.website-files.com/5ff66329429d880392f6cba2/618e3ef1d4fd65b58fac771b_AES%20design.png)
+
+_Image credit: [wallarm](https://www.wallarm.com/what/what-is-aes-advanced-encryption-standard)_
+
+~ specifes a FIPS-approved cryptographic algorithm that can be used to protect electronic data. The algorithm is a symmetric block cipher that can encrypt (encipher) and decrypt (decipher) digital information.
+
+The AES algorithm is capable of using cryptographic keys of 128, 192, and 256 bits to encrypt
+and decrypt data in blocks of 128 bits.
+
+Read the publication: https://doi.org/10.6028/NIST.FIPS.197-upd1
+
+_Another example:_ When connecting to cloud VM, you'll need to SSH to that machine using the private key generated. Read more on: https://iqfareez.com/blog/deploy-nodered-flows-to-the-cloud-azure#accessing-your-vms-shell
+
+### RSA
+
+![RSA](https://cdn.mindmajix.com/blog/images/what-is-rsa-algorithm_2_3-4-23.png)
+
+_Image credit: [MindMajix](https://mindmajix.com/what-is-rsa-algorithm)_
+
+Named after its inventors, **R**ivest–**S**hamir–**A**dleman.
+
+~ relies on a public key and a private key. The keys are mathematically related, but it is computationally infeasible to derive the private key from the public key.
+
+### Hashing
+
+~ refers to the process of taking an input (or key) and applying a mathematical function called a hash function to produce a fixed-size output.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/9af95c8b-7a64-4f66-8501-13605c744427">
+  <img alt="Hashing diagram" src="https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/c789caa6-306d-4c59-ab39-e3402a3b3c0f">
+</picture>
+
+Hashing is **one way function** - once you hash, you cannot de-hash.
+
+#### Application of hashing
+
+- Data Retrieval: Hash functions are used to map keys to indexes in an array, allowing efficient storage and retrieval of data.
+
+- Password Storage: Rather than storing actual passwords, systems typically store the hash values of passwords. When a user enters their password, it is hashed and compared to the stored hash value.
+
+- Digital Signatures: Provides a way to verify the integrity and authenticity of digital messages or documents.
+
+- Data Integrity: Hashing can be used to ensure data integrity during transmission or storage. By calculating the hash value of a file or message before and after transmission, one can verify if the data has been modified during transit or if any errors have occurred. This technique is commonly used in checksum algorithms and integrity checking mechanisms.
+
+- Cryptographic Hash Functions: Specifically designed to have properties like collision resistance and preimage resistance. Collision resistance means that it is computationally infeasible to find two different inputs that produce the same hash value.
+
+Learn more:
+
+- [Geeks for Geeks - Active and Passive attacks in Information Security](https://www.geeksforgeeks.org/active-and-passive-attacks-in-information-security/)
+- [YouTube - 7 Cryptography Concepts EVERY Developer Should Know](https://youtu.be/NuyzuNBFWxQ)
