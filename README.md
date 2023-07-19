@@ -1799,27 +1799,6 @@ DDos attack traphic metaphor (Credit: [Cloudflare](https://www.cloudflare.com/))
 - **Modification**: attack on **Integrity**
 - **Fabrication**: attack on **Authenticity**
 
-### Encryption
-
-~ is a process of converting plain or readable data, often referred to as **plaintext**, into an unintelligible form known as **ciphertext**. It is a fundamental technique used to protect sensitive information from unauthorized access or interception during storage or transmission. The encryption process involves using an **encryption algorithm** and a secret key to scramble the plaintext, making it unreadable to anyone who does not possess the corresponding decryption key.
-
-Plaintext --> encryption algorithm --> ciphertext
-
-#### Symmetric encryption
-
-Encryption using same secret key
-
-Requirements
-
-- A strong encryption algorithm
-- A secret key only sender & receiver knows.
-
-#### Asymmetric encryption
-
-Encryption using public and private key
-
-Example: When connecting to cloud VM, you'll need to SSH to that machine using the private key generated. Read more on: https://iqfareez.com/blog/deploy-nodered-flows-to-the-cloud-azure#accessing-your-vms-shell
-
 ### Cryptography
 
 #### Caesar Cipher
@@ -1849,15 +1828,26 @@ Al-Kindi recognized that certain letters or symbols in a language occur more fre
 
 A **slight change** in either the key or the plain-text should result in a **significant change in the cipher-text**. It is considered as one of the desirable property of any encryption algorithm.
 
-### Data Encryption Standard (DES)
+### Encryption
 
-- Obsolete and highly insecure
+~ is a process of converting plain or readable data, often referred to as **plaintext**, into an unintelligible form known as **ciphertext**. It is a fundamental technique used to protect sensitive information from unauthorized access or interception during storage or transmission. The encryption process involves using an **encryption algorithm** and a secret key to scramble the plaintext, making it unreadable to anyone who does not possess the corresponding decryption key.
 
-### Triple DES Encryption
+```mermaid
+flowchart LR
+    A[Plaintext] --> B[Encryption Algorithm]
+    B --> C[Ciphertext]
+```
 
-aka 3DES or TDES
+#### Symmetric encryption - Triple DES Encryption
 
-~ applies DES algorithm three times to each data block using three different keys
+Encryption using same secret key
+
+Requirements
+
+- A strong encryption algorithm
+- A secret key only sender & receiver knows.
+
+**Triple DES Encryption** (aka 3DES or TDES) applies DES algorithm three times to each data block using three different keys
 
 ![triple DES](https://community.cisco.com/legacyfs/online/legacy/9/6/8/112869-des3p1.gif)
 
@@ -1865,7 +1855,13 @@ _Image credit: [Cisco](https://community.cisco.com/t5/security-knowledge-base/3d
 
 But it three times slower.
 
-### Advanced Encryption Standard (AES)
+#### Asymmetric encryption - Advanced Encryption Standard (AES)
+
+Encryption using public and private key
+
+![aes diagram](https://assets.website-files.com/5ff66329429d880392f6cba2/618e3ef1d4fd65b58fac771b_AES%20design.png)
+
+_Image credit: [wallarm](https://www.wallarm.com/what/what-is-aes-advanced-encryption-standard)_
 
 ~ specifes a FIPS-approved cryptographic algorithm that can be used to protect electronic data. The algorithm is a symmetric block cipher that can encrypt (encipher) and decrypt (decipher) digital information.
 
@@ -1874,9 +1870,13 @@ and decrypt data in blocks of 128 bits.
 
 Read the publication: https://doi.org/10.6028/NIST.FIPS.197-upd1
 
-### Non-symmetric Encryption
+_Another example:_ When connecting to cloud VM, you'll need to SSH to that machine using the private key generated. Read more on: https://iqfareez.com/blog/deploy-nodered-flows-to-the-cloud-azure#accessing-your-vms-shell
 
-#### RSA
+### RSA
+
+![RSA](https://cdn.mindmajix.com/blog/images/what-is-rsa-algorithm_2_3-4-23.png)
+
+_Image credit: [MindMajix](https://mindmajix.com/what-is-rsa-algorithm)_
 
 Named after its inventors, **R**ivest–**S**hamir–**A**dleman.
 
@@ -1908,4 +1908,4 @@ Hashing is **one way function** - once you hash, you cannot de-hash.
 Learn more:
 
 - [Geeks for Geeks - Active and Passive attacks in Information Security](https://www.geeksforgeeks.org/active-and-passive-attacks-in-information-security/)
-- [YouTube - ]
+- [YouTube - 7 Cryptography Concepts EVERY Developer Should Know](https://youtu.be/NuyzuNBFWxQ)
