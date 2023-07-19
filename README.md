@@ -1453,6 +1453,15 @@ In computing, a thread is the **smallest unit of execution** that can be schedul
 
 In the context of asynchronous programming, threads are often used **to execute tasks in parallel** or **to avoid blocking** the main thread. For example, when you perform an I/O operation that might take some time to complete, such as reading a file from disk or downloading data from the internet, you can create a new thread to handle that operation while the main thread continues to run other tasks. [[Docs]](https://learn.microsoft.com/en-us/dotnet/api/system.threading.thread?view=net-7.0)
 
+> threads are often used to execute tasks in parallel
+
+FYI, the statement above refers to **concurrency** - the ability of a system to handle multiple tasks or processes at the same time.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/a87bc701-ccf0-4764-b5c4-b7cb490e728e">
+  <img alt="Concurrency diagram" src="https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/19ac83c5-b9cb-4f75-8ec9-739a9e49dff2">
+</picture>
+
 #### Creating a new thread
 
 ```csharp
@@ -1613,6 +1622,11 @@ Docs and example code using `Task` class -> https://learn.microsoft.com/en-us/do
 - Execute the tasks simultaneously on multiple processors
 - Combine the results of the tasks to get the final result
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/b64f8b54-f4b4-4490-9cb1-22649c82589e">
+  <img alt="Parallel Computing" src="https://github.com/iqfareez/MCTE-4327-Software-Engineering/assets/60868965/4a6a71c7-8fab-4b61-a949-3015582d4b63">
+</picture>
+
 ### Parallel.For
 
 Executes a for loop in which iterations may run in parallel. [[Docs]](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.parallel.for?view=net-5.0)
@@ -1654,6 +1668,22 @@ public class Program
     }
 }
 ```
+
+### Confused between multi-threading (concurrency) and parallel computing?
+
+HAhaha me too. Basically,
+
+- In multi-threading, a **single** process is used to divide the work into multiple threads (they divide the execution time).
+- In parallel computing, multiple processes are used to divide the work into multiple core (they divide the work).
+
+![concurrency vs parallel](https://www.baeldung.com/wp-content/uploads/sites/4/2022/01/vs-1024x462-1.png)
+
+_Image credit: [Baeldung](https://www.baeldung.com/cs/concurrency-vs-parallelism)_
+
+Great article to read on:
+
+- https://www.baeldung.com/cs/concurrency-vs-parallelism
+- https://www.loginradius.com/blog/engineering/concurrency-vs-parallelism/
 
 **[⬆ Back to top](#mcte-4327-software-engineering)**
 
