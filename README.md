@@ -1346,6 +1346,59 @@ ID 143 belongs to: Alice
 
 [[Source](https://www.linkedin.com/posts/alexxubyte_systemdesign-coding-interviewtips-activity-7051943306309586946-I1Je)]
 
+**Final Exam Question** S2 2022/2023:
+
+> Question: Explain the difference between Array and List
+>
+> Answer: Array is a fixed size data structure while List is a dynamic size data structure. Array is faster than List in terms of accessing the elements. However, List is faster than Array in terms of adding and removing elements.
+
+### LINQ
+
+Language-Integrated Query (LINQ) is the name for a set of technologies based on the integration of query capabilities directly into the C# language. [[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/linq/)]
+
+```csharp
+// Filter the list of dishes to only include dishes that start with "R"
+var dishesStartingWithR = hariRayaDishes.Where(dish => dish.StartsWith("R"));
+
+// Sort the list of dishes alphabetically
+var sortedDishes = hariRayaDishes.OrderBy(dish => dish);
+
+// Count the number of dishes that start with "R"
+var numberOfDishesStartingWithR = hariRayaDishes.Count(dish => dish.StartsWith("R"));
+```
+
+**Final Exam Question** S2 2022/2023:
+
+<blockquote>
+Using LINQ, complete the code such that the (5)
+program displays the capitalized names of students whose names start with ‘I’
+and whose CGPA are above 2.3.
+
+```csharp
+static void Main()
+{
+    List<Student> students = new List<Student>();
+    students.Add(new Student { Name = "Ilyas", CGPA = 2.672});
+    students.Add(new Student { Name = "Mahmood", CGPA = 1.492});
+    students.Add(new Student { Name = "Ibrahim", CGPA = 3.556});
+    students.Add(new Student { Name = "Ismail", CGPA = 1.836});
+    //Code to be completed. Write the code and submit.
+}
+```
+
+Solution:
+
+```csharp
+var filteredStudents = students.Where(student => student.Name.StartsWith("I") && student.CGPA > 2.3).Select(student => student.Name.ToUpper());
+
+foreach (var student in filteredStudents)
+{
+    Console.WriteLine(student.Name);
+}
+```
+
+</blockquote>
+
 **[⬆ Back to top](#mcte-4327-software-engineering)**
 
 ## Chapter 7 - Graphical User Interface (GUI)
@@ -1527,6 +1580,18 @@ The `lock` keyword in C# is used to prevent multiple threads from accessing the 
 
 This helps to prevent [race conditions](https://www.techtarget.com/searchstorage/definition/race-condition) and other [concurrency](https://web.mit.edu/6.005/www/fa14/classes/17-concurrency/)-related issues that can arise when multiple threads access shared resources.
 
+**Final Exam Question** S2 2022/2023:
+
+> \*Code snippet is given\*
+>
+> Question: What situation in the code above is about.
+>
+> Solution: Deadlock
+>
+> Question: Explain why this is happening
+>
+> In computer programming, a deadlock is a situation that occurs when two or more processes are unable to proceed because each is waiting for the other to release a resource that it needs. This creates a circular dependency where none of the processes can make progress, leading to a standstill.
+
 #### Sharing global variables among threads
 
 ```csharp
@@ -1611,6 +1676,16 @@ class Program
 ### Thread pool
 
 A thread pool is a **collection of threads** that can be used to perform several tasks in the background. It is a common technique used to optimize the performance of applications that use multiple threads to perform long-running asynchronous tasks. [[Docs]](https://learn.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool)
+
+**Final Exam Question** S2 2022/2023 (real):
+
+> Write a one-line code to using Task to print "Finally! We are done" to the console
+>
+> Solution:
+>
+> ```csharp
+> Task.Run(() => Console.WriteLine("Finally! We are done"));
+> ```
 
 Docs and example code using `Task` class -> https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-7.0
 
@@ -1777,6 +1852,12 @@ _Image credit: https://wizardzines.com/_
 - **XML (eXtensible Markup Language):** A markup language that defines a set of rules for encoding documents. XML serialization is commonly used for storing and exchanging structured data, especially when compatibility and extensibility are important.
 
   In C#, you can use `XmlSerializer` from `System.Xml.Serialization` namespace to serialize and deserialize XML files. For example code, see [here](https://github.com/iqfareez/MCTE-4327-Software-Engineering/blob/c6bfc4d80b98a9c87cfeacd2cb86cb67854e2ea1/ConsoleApp-Serialization/SerializeApp/Program.cs#L26)
+
+**Final Exam Question** S2 2022/2023
+
+> Question: Compare JSON and binary serialization formats and give one example scenarios where each of these formats are desired to be used
+>
+> Answer: JSON is a human-readable and widely supported text-based serialization format. In contrast, binary serialization formats offer a more compact and efficient representation of data, making them suitable for resource-constrained environments and high-performance systems that require faster parsing and reduced storage and bandwidth usage. Choosing between JSON and binary formats depends on the specific use case: JSON is preferred for readability and web-related scenarios, while binary formats excel in efficiency and performance-critical applications.
 
 ### Serial Port
 
